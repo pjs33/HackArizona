@@ -17,10 +17,10 @@ INSERT INTO lobbyists(lobbyist_username, realname, email, password) VALUES ("gwo
 INSERT INTO lobbyists(lobbyist_username, realname, email, password) VALUES ("theoneringllc", "The One Ring LLC", "contact@theoneringllc.com", "[Insert#HashEquivalent#]");
 
 
-INSERT INTO issues(issue_name, issue_start_date, issue_end_date, goal_amount, current_amount, num_donors, picture, fk_lobbyist_username) VALUES ("Legalize Marijuana", "2015-10-01 00:00:00.000", "2016-04-01 00:00:00.000", "1000000","2899","1","http://media.graytvinc.com/images/Marijuana+Vote.png", "bbaggins");
-INSERT INTO issues(issue_name, issue_start_date, issue_end_date, goal_amount, current_amount, num_donors, picture, fk_lobbyist_username) VALUES ("Fix The Pothole on Grant Road", "2016-01-10 10:00:00.000", "2016-04-10 10:00:00.000", "1000","0","0","http://blogsdir.cms.rrcdn.com/91/files/2014/01/pothole.jpg", "sgamgee");
-INSERT INTO issues(issue_name, issue_start_date, issue_end_date, goal_amount, current_amount, num_donors, picture, fk_lobbyist_username) VALUES ("Universal Background Checks for All Gun Purchases", "2014-12-12 12:13:00.000", "2015-06-12 12:13:00.000", "500000","4999","1","http://i.huffpost.com/gen/1132722/images/o-GUNS-IN-SCHOOLS-facebook.jpg", "theoneringllc");
-INSERT INTO issues(issue_name, issue_start_date, issue_end_date, goal_amount, current_amount, num_donors, picture, fk_lobbyist_username) VALUES ("Term Limits for Members of Congress", "2016-01-20 20:00:00.000", "2016-07-20 20:00:00.000", "200000","31723","5","https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Seal_of_the_United_States_Congress.svg/2000px-Seal_of_the_United_States_Congress.svg.png", "gwormtongue");
+INSERT INTO issues(issue_name, issue_scope, issue_start_date, issue_end_date, goal_amount, current_amount, num_donors, picture, fk_lobbyist_username, num_support, num_oppose) VALUES ("Legalize Marijuana", "national", "2015-10-01 00:00:00.000", "2016-04-01 00:00:00.000", "1000000","2899","1","http://media.graytvinc.com/images/Marijuana+Vote.png", "bbaggins", "83843", "76854");
+INSERT INTO issues(issue_name, issue_scope, issue_start_date, issue_end_date, goal_amount, current_amount, num_donors, picture, fk_lobbyist_username, num_support, num_oppose) VALUES ("Fix The Pothole on Grant Road", "local", "2016-01-10 10:00:00.000", "2016-04-10 10:00:00.000", "1000","0","0","http://blogsdir.cms.rrcdn.com/91/files/2014/01/pothole.jpg", "sgamgee", "453", "2");
+INSERT INTO issues(issue_name, issue_scope, issue_start_date, issue_end_date, goal_amount, current_amount, num_donors, picture, fk_lobbyist_username, num_support, num_oppose) VALUES ("Universal Background Checks for All Gun Purchases", "national", "2014-12-12 12:13:00.000", "2015-06-12 12:13:00.000", "500000","4999","1","http://i.huffpost.com/gen/1132722/images/o-GUNS-IN-SCHOOLS-facebook.jpg", "theoneringllc", "283283", "275855");
+INSERT INTO issues(issue_name, issue_scope, issue_start_date, issue_end_date, goal_amount, current_amount, num_donors, picture, fk_lobbyist_username, num_support, num_oppose) VALUES ("Term Limits for Members of Congress", "national", "2016-01-20 20:00:00.000", "2016-07-20 20:00:00.000", "200000","31723","5","https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Seal_of_the_United_States_Congress.svg/2000px-Seal_of_the_United_States_Congress.svg.png", "gwormtongue", "994882", "990223");
 
 
 INSERT INTO donations(fk_username, fk_issue_id, money_amount) VALUES ("dvader", "1", "2899"); 
@@ -30,3 +30,14 @@ INSERT INTO donations(fk_username, fk_issue_id, money_amount) VALUES ("cbacca", 
 INSERT INTO donations(fk_username, fk_issue_id, money_amount) VALUES ("jhutt", "4", "9778"); 
 INSERT INTO donations(fk_username, fk_issue_id, money_amount) VALUES ("cdooku", "4", "10000"); 
 INSERT INTO donations(fk_username, fk_issue_id, money_amount) VALUES ("pamidala", "4", "887"); 
+
+
+INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("dvader", "1", TRUE);
+INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("dvader", "2", FALSE);
+INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("cbacca", "1", TRUE);
+INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("bfett", "3", TRUE);
+INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("daddyproblems", "4", TRUE);
+INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("pdameron", "1", FALSE);
+INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("cdooku", "2", TRUE);
+INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("", "", "");
+INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("", "", "");

@@ -27,6 +27,7 @@ CREATE TABLE issues
 (
 	issue_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	issue_name VARCHAR(255) NOT NULL,
+	issue_scope VARCHAR(255) NOT NULL,
 	issue_start_date DATETIME NOT NULL,
 	issue_end_date DATETIME NOT NULL,
 	goal_amount INT NOT NULL,
@@ -34,7 +35,10 @@ CREATE TABLE issues
 	num_donors INT NOT NULL,
 	picture VARCHAR(255) NOT NULL,
 	fk_lobbyist_username VARCHAR(255) NOT NULL,
-	
+	num_support INT NOT NULL,
+	num_oppose INT NOT NULL,
+
+
 	FOREIGN KEY (fk_lobbyist_username) REFERENCES lobbyists(lobbyist_username)
 );
 
@@ -49,4 +53,16 @@ CREATE TABLE donations
 	CONSTRAINT donation PRIMARY KEY (fk_username, fk_issue_id)
 );
 
+CREATE TABLE votes
+(
+	fk_username VARCHAR(255) NOT NULL,
+	fk_issue_id INT NOT NULL,
+	support_issue BOOLEAN NOT NULL,
+
+	FOREIGN KEY (fk_username) REFERENCES users(username),
+	FOREIGN KEY (fk_issue_id) REFERENCES issues(issue_id),
+
+	CONSTRAINT vote PRIMARY KEY (fk_username, fk_issue_id)
+
+);
 
