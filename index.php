@@ -37,8 +37,8 @@
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <a href="https://www.google.com/" target="_blank"><img src="./css/images/img1.jpg" alt="img1" width="460" height="345"></a>
+        <div class="item active" style="position: relative;">
+          <a href="https://google.com" target="_blank"><img src="./css/images/img1.jpg" alt="img1" width="460" height="345"></a>
         </div>
 
         <div class="item">

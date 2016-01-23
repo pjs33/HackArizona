@@ -1,13 +1,18 @@
 @CHARSET "UTF-8";
 
 body {
-    /*background-color:;*/
+    background-color:#f2f2f2;
 }
 
 #bodyContent {
     width: 900px;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 0 10px #888888;
+    border-radius: 0px 0px 10px 10px;
+    background-color: white;
+
 }
 
 .carousel-inner > .item > img,
