@@ -17,10 +17,13 @@ class DatabaseConnection {
 		}
 	}
 
+	/*********************************************************************************************
+	 * user
+	 ********************************************************************************************/
 	// Arguments: Username [String], Password [String], Name [String]
 	// Returns: True if Username is unique and successfully added to the database
 	// Returns: False if Username is already in database
-	public function register($username, $realname, $email, $password) {
+	public function register($username, $realname, $email, $address, $city, $state, $zipcode, $password) {
 
 		$username = htmlspecialchars($username);
 		$realname = htmlspecialchars($realname);
@@ -37,163 +40,136 @@ class DatabaseConnection {
 
 		$hash = password_hash($password, PASSWORD_DEFAULT);
 
-		$sql = "INSERT INTO users(username, hash, name, email) VALUES(:username, :hash, :name, :email);";
+		$sql = "INSERT INTO users(username, realname, email, address, city, state, zipcode, password) VALUES(:username, :realname, :email, :address, :city, :state, :zipcode, :password);";
 		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':username' => $username, ':hash' => $hash, ':name' => $name, ':email' => $email) );
+		$stmt->execute( array(':username' => $username, ':realname' => $realname, ':email' => $email, ':address' => $address, ':city' => $city, ':state' => $state, ':zipcode' => $zipcode, ':password' => $hash) );
 
 		return true;
 	}
-
-
-	// DOES THIS WORK WITH THE INCORRECT USERNAME??
 
 	// Arguments: Username [String], Password [String]
 	// Returns: The string "manager" if the user is a manager
 	// Returns: The string "employee" if the user is a employee
 	// Returns: False if the Username and Password are incorrect
 	public function verifyLogin($username, $password) {
-		$sql = "SELECT hash FROM users WHERE username = :username;";
+		$sql = "SELECT password FROM users WHERE UPPER(username) = UPPER(:username);";
 		$stmt = $this->DB->prepare( $sql );
 		$stmt->execute( array(':username' => $username) );
 		$row = $stmt->fetch( PDO::FETCH_ASSOC );
-
-		$success = password_verify($password, $row['hash']);
-
-		if($success) {
-			$sql = "SELECT fk_username FROM managers WHERE fk_username = :username LIMIT 1;";
-			$stmt = $this->DB->prepare( $sql );
-			$stmt->execute( array(':username' => $username) );
-			$row = $stmt->fetch( PDO::FETCH_ASSOC );
-
-			if($stmt->rowCount() > 0) {
-				return "manager";
-			} else {
-				return "employee";
-			}
-		} else {
-			return "false";
-		}
-	}
-
-	public function getName($user){
-		$sql = "SELECT name FROM users WHERE username = :user;";
-		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':user' => $user) );
-		$row = $stmt->fetch( PDO::FETCH_ASSOC );
-
-		return $row;
-	}
-
-	public function getManagedEmployees($username) {
-		$sql = "SELECT fk_username FROM group_members INNER JOIN (SELECT fk_group_name FROM managers WHERE fk_username = :username) managed_groups ON group_members.fk_group_name = managed_groups.fk_group_name;";
-		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':username' => $username) );
-		$rows = $stmt->fetchAll( PDO::FETCH_ASSOC );
-
-		return $rows;
-	}
-
-	public function getUsersIndividualEventsForWeek($username, $week, $year) {
-		$weekStartEndArray = $this->getStartAndEndDate($week,$year);
-
-		$sql = "SELECT * FROM events INNER JOIN ( SELECT fk_event_id AS event_id FROM event_individual_atendees WHERE fk_username = :username ) individual_events ON events.event_id = individual_events.event_id WHERE DATE(events.start_datetime) >= :start_datetime AND DATE(events.end_datetime) <= :end_datetime ORDER BY events.start_datetime;";
-		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':username' => $username, ':start_datetime' => $weekStartEndArray["week_start"], ':end_datetime' => $weekStartEndArray["week_end"]) );
-		$rows = $stmt->fetchAll( PDO::FETCH_ASSOC );
-
-		return $rows;
-	}
-
-	public function getUsersGroupEventsForWeek($username, $week, $year) {
-		$weekStartEndArray = $this->getStartAndEndDate($week,$year);
-
-		$sql = "SELECT * FROM events INNER JOIN ( SELECT fk_event_id AS event_id FROM event_group_atendees INNER JOIN ( SELECT fk_group_name FROM group_members WHERE fk_username = :username ) user_groups ON event_group_atendees.fk_group_name = user_groups.fk_group_name ) user_group_events ON events.event_id = user_group_events.event_id WHERE DATE(events.start_datetime) >= :start_datetime AND DATE(events.end_datetime) <= :end_datetime ORDER BY events.start_datetime;";
-		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':username' => $username, ':start_datetime' => $weekStartEndArray["week_start"], ':end_datetime' => $weekStartEndArray["week_end"]) );
-		$rows = $stmt->fetchAll( PDO::FETCH_ASSOC );
-
-		return $rows;
-	}
-
-	private function getStartAndEndDate($week, $year) {
-  		$date = new DateTime();
-  		$date->setISODate($year, $week);
-  		$weekStartEnd['week_start'] = $date->format('Y-m-d');
-  		$date->modify('+6 days');
-  		$weekStartEnd['week_end'] = $date->format('Y-m-d');
-
-  		return $weekStartEnd;
-	}
-
-	// getManagedGroups
-
-	//GET LOCATIONS
-
-	public function getGroups($username) {
-		$sql = "SELECT fk_group_name AS group_name FROM group_members WHERE fk_username = :username;";
-		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':username' => $username) );
-		$rows = $stmt->fetchAll( PDO::FETCH_ASSOC );
-
-		return $rows;
-	}
-
-	public function getLocations() {
-		$sql = "SELECT location_name FROM locations;";
-		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute();
-		$rows = $stmt->fetchAll( PDO::FETCH_ASSOC );
-
-		return $rows;
-	}
-
-	// Arguments: Username, Password
-	// Returns: The string "manager" if the user is a manager
-	// Returns: The string "employee" if the user is a employee
-	// Returns: False if the Username and Password are incorrect
-	public function createEmployeeEvent($eventName, $username, $startDateTime, $endDateTime, $location, $description) {
 		
-		$sql = "SELECT event_id FROM events WHERE (start_datetime <= :startDateTime AND end_datetime > :startDateTime) OR (start_datetime < :endDateTime AND end_datetime >= :endDateTime) OR (start_datetime >= :startDateTime AND end_datetime <= :endDateTime);";
-		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':startDateTime' => $startDateTime, ':endDateTime' => $endDateTime) );
-		$row = $stmt->fetch( PDO::FETCH_ASSOC );
-
-		if($stmt->rowCount() > 0) {
+		// check for valid users
+		if (empty($row)) {
 			return false;
 		}
 
-		$sql = "INSERT INTO events(event_name, start_datetime, end_datetime, fk_location, description) VALUES(:eventName, :startDateTime, :endDateTime, :location, :description);";
-		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':eventName' => $eventName, ':startDateTime' => $startDateTime, ':endDateTime' => $endDateTime, ':location' => $location, ':description' => $description) );
-
-		$sql = "INSERT INTO event_individual_atendees(fk_event_id, fk_username) VALUES(LAST_INSERT_ID(), :username);";
-		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':username' => $username) );
-
-		return true;
+		// check password correct
+		return password_verify($password, $row['password']);
 	}
-
-
-	public function createGroupEvent($eventName, $groupName, $startDateTime, $endDateTime, $location, $description) {
 	
-		$sql = "SELECT event_id FROM events WHERE (start_datetime <= :startDateTime AND end_datetime > :startDateTime) OR (start_datetime < :endDateTime AND end_datetime >= :endDateTime) OR (start_datetime >= :startDateTime AND end_datetime <= :endDateTime);";
+	public function getUser($userid) {
+		$sql = "SELECT * FROM users WHERE userid = :userid;";
 		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':startDateTime' => $startDateTime, ':endDateTime' => $endDateTime) );
+		$stmt->execute( array(':userid' => $userid) );
 		$row = $stmt->fetch( PDO::FETCH_ASSOC );
-
-		if($stmt->rowCount() > 0) {
-			return false;
-		}
-
-		$sql = "INSERT INTO events(event_name, start_datetime, end_datetime, fk_location, description) VALUES(:eventName, :startDateTime, :endDateTime, :location, :description);";
-		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':eventName' => $eventName, ':startDateTime' => $startDateTime, ':endDateTime' => $endDateTime, ':location' => $location, ':description' => $description) );
-
-		$sql = "INSERT INTO event_group_atendees(fk_event_id, fk_group_name) VALUES(LAST_INSERT_ID(), :group_name);";
-		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':group_name' => $groupName));
-
-		return true;
+		
+		$return $row;
 	}
+	
+	/*********************************************************************************************
+	 * issues
+	 ********************************************************************************************/
+	public function createIssue($issue_name, $issue_scope, $goal_amount, $picture, $fk_lobbyist_username) {
+		// create dates
+		$startdate = new DateTime("now");
+		$enddate = new DateTime("+180 day");
+		
+		$startdate = $startdate->format("D, M d Y");
+		$enddate = $startdate->format("D, M d Y");
+	
+		$sql = "INSERT INTO issues(issue_name, issue_scope, issue_start_date, issue_end_date, goal_amount, current_amount, num_donors, picture, fk_lobbyist_username) VALUES(:issue_name, :issue_scope, :issue_start_date, :issue_end_date, :goal_amount, :current_amount, :num_donors, :picture, :fk_lobbyist_username);";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':issue_name' => $issue_name, ':issue_scope' => $issue_scope, ':issue_start_date' => $startdate, ':issue_end_date' => $enddate, ':goal_amount' => $goal_amount, ':current_amount' => 0, ':num_donors' => 0, ':picture' => $picture, ':fk_lobbyist_username' => $fk_lobbyist_username) );
+	}
+	
+	public function getIssue($issueid) {
+		$sql = "SELECT * FROM issues WHERE issueid = :issueid;";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':issueid' => $issueid) );
+		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+	
+		$return $row;
+	}
+	
+	/*********************************************************************************************
+	 * vote
+	 ********************************************************************************************/
+	public function vote($fk_username, $fk_issue_id) {
+		$sql = "INSERT INTO votes(fk_username, fk_issue_id) VALUES(:fk_username, :fk_issue_id);";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':fk_username' => $fk_username, ':fk_issue_id' => $fk_issue_id) );
+	}
+	
+	public function unvote($fk_username, $fk_issue_id) {
+		$sql = "DELETE FROM votes WHERE fk_username = :fk_username AND fk_issue_id = :fk_issue_id;";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':fk_username' => $fk_username, ':fk_issue_id' => $fk_issue_id) );
+	}
+	
+	public function countVotes($fk_issue_id) {
+		$sql = "SELECT * FROM votes WHERE fk_issue_id = :fk_issue_id;";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':fk_issue_id' => $fk_issue_id) );
+		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+		
+		$return count($row);
+	}
+	
+	public function votedFor($fk_username) {
+		$sql = "SELECT * FROM votes WHERE fk_username = :fk_username;";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':fk_username' => $fk_username) );
+		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+		
+		$return $row;
+	}
+	
+	/*********************************************************************************************
+	 * donation
+	 ********************************************************************************************/
+	public function donate($fk_username, $fk_issue_id, $money_amount) {
+		$sql = "INSERT INTO donations(fk_username, fk_issue_id, money_amount) VALUES(:fk_username, :fk_issue_id, :money_amount);";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':fk_username' => $fk_username, ':fk_issue_id' => $fk_issue_id, ':money_amount' => $money_amount) );
+	}
+	
+	public function undonate($fk_username, $fk_issue_id) {
+		$sql = "DELETE FROM donations WHERE fk_username = :fk_username AND fk_issue_id = :fk_issue_id;";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':fk_username' => $fk_username, ':fk_issue_id' => $fk_issue_id) );
+	}
+	
+	public function countDonations($fk_issue_id) {
+		$sql = "SELECT * FROM donations WHERE fk_issue_id = :fk_issue_id;";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':fk_issue_id' => $fk_issue_id) );
+		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+	
+		$sum = 0;
+		for ($i = 0; $i < count($row); $i++) {
+			$sum += $row[$i]['money_amount'];
+		}
+		
+		return $sum;
+	}
+	
+	public function donatedTo($fk_username) {
+		$sql = "SELECT * FROM donations WHERE fk_username = :fk_username;";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':fk_username' => $fk_username) );
+		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+	
+		$return $row;
+	}
+	
 }
 ?>

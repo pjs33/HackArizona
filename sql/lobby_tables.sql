@@ -36,9 +36,6 @@ CREATE TABLE issues
 	num_donors INT NOT NULL,
 	picture VARCHAR(255) NOT NULL,
 	fk_lobbyist_username VARCHAR(255) NOT NULL,
-	num_support INT NOT NULL,
-	num_oppose INT NOT NULL,
-
 
 	FOREIGN KEY (fk_lobbyist_username) REFERENCES lobbyists(lobbyist_username)
 );
@@ -58,7 +55,6 @@ CREATE TABLE votes
 (
 	fk_username VARCHAR(255) NOT NULL,
 	fk_issue_id INT NOT NULL,
-	support_issue BOOLEAN NOT NULL,
 
 	FOREIGN KEY (fk_username) REFERENCES users(username),
 	FOREIGN KEY (fk_issue_id) REFERENCES issues(issue_id),
