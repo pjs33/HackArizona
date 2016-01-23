@@ -15,6 +15,7 @@
 
 #page-title {
   color: white;
+  text-align: center;
 }
 
 #header-container #header {
@@ -78,7 +79,7 @@
 <header class="page-row">
   <div id="header-container">
     <div id="header">
-      <h1 id="page-title">Header</h1>
+      <h1 id="page-title">Website Name</h1>
     </div>
   </div>
 </header>
