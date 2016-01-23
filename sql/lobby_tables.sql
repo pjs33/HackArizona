@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS donations;
 DROP TABLE IF EXISTS issues;
+DROP TABLE IF EXISTS lobbyist;
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE users
@@ -7,8 +8,16 @@ CREATE TABLE users
 	username VARCHAR(255) NOT NULL PRIMARY KEY,
 	realname VARCHAR(255) NOT NULL,
 	email VARCHAR(255) NOT NULL,
-	is_lobbyist BOOLEAN NOT NULL,
 	password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE lobbyist
+(
+	lobbyist_username VARCHAR(255) NOT NULL PRIMARY KEY;
+	realname VARCHAR(255) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL
+
 );
 
 CREATE TABLE issues 
@@ -21,7 +30,7 @@ CREATE TABLE issues
 	picture VARCHAR(255) NOT NULL,
 	fk_lobbyist_username VARCHAR(255) NOT NULL,
 	
-	FOREIGN KEY (fk_lobbyist_username) REFERENCES users(username)
+	FOREIGN KEY (fk_lobbyist_username) REFERENCES lobbyist(lobbyist_username)
 );
 
 CREATE TABLE donations
