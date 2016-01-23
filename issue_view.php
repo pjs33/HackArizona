@@ -27,6 +27,10 @@
       require_once("view_components/navbar.php");
     ?>
 
+    <div id="body-content" style="width: 800px: margin: auto; border: 1px solid black; height: 100%;">
+
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
