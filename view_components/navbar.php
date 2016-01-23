@@ -32,8 +32,8 @@
     width: 100%;
     height: 45px;
     background: rgba(30,30,30,0.8);
-    border-bottom: 5px solid #1a4ca3;
     text-align: center;
+    padding-top: 3px;
 }
 
 .nav-link-separator {
@@ -44,7 +44,7 @@
 
 .univ-header-bg {
   width: 100%;
-  height: 80px;
+  height: 100px;
   background: #0c234b;
   border-top: #ab0520 solid 20px;
   position: relative;
