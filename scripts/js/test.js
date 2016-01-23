@@ -1,1 +1,1 @@
-//just a test file for jse
+//just a test file for js
