@@ -212,16 +212,16 @@
         
         <div class="row">
           <div id="localIssues" class="col-sm-4">
-      	    <a type="button" class="btn btn-success btn-block"><span class="glyphicon glyphicon-edit"></span>Local</a>
-            <span id="localCaret" style="color: #5cb85c; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+      	    <a type="button" class="btn btn-danger btn-block"><span class="glyphicon glyphicon-edit"></span>Local</a>
+            <span id="localCaret" style="color: #d9534f; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
           </div>
           <div id="stateIssues" class="col-sm-4">
-             <a type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-edit"></span>State</a>		
-             <span id="stateCaret" style="color: #337ab7; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+             <a type="button" class="btn btn-default btn-block"><span class="glyphicon glyphicon-edit"></span>State</a>		
+             <span id="stateCaret" style="color: black; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
           </div>
           <div id="nationalIssues" class="col-sm-4">
-            <a type="button" class="btn btn-danger btn-block"><span class="glyphicon glyphicon-edit"></span>National</a>
-            <span id="nationalCaret" style="color: #d9534f; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+            <a type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-edit"></span>National</a>
+            <span id="nationalCaret" style="color: #337ab7; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
           </div>
         </div>
       </div>
@@ -262,8 +262,8 @@
 
         var changeBoolean = 0;
 
-        var randomIssues = ["Taylor Swift newds","LETS BUILD A WALL","BAN ALL MUSLIMS","Jamal Caught Red Handed","Support Local PlayGround","Local Pothole", 'Dog "Lost"',"Pet shark on the loose", "President Obama...", "Stick In Road", "Mountain Currently Exploding..."];
-        var randomURLforIssues = ["./css/images/01.jpg","./css/images/02.jpg","./css/images/03.jpg","./css/images/04.jpg","./css/images/05.jpg","./css/images/06.jpg", "./css/images/07.jpg", "./css/images/08.jpg", "./css/images/09.jpg","./css/images/10.jpg","./css/images/11.jpg"];
+        var randomIssues = ["TayTay Today","LETS BUILD A WALL","Support Local PlayGround","Local Pothole", 'Dog "Lost"',"Pet shark on the loose", "President Obama...", "Stick In Road", "Mountain Currently Exploding..."];
+        var randomURLforIssues = ["./css/images/01.jpg","./css/images/02.jpg","./css/images/05.jpg","./css/images/06.jpg", "./css/images/07.jpg", "./css/images/08.jpg", "./css/images/09.jpg","./css/images/10.jpg","./css/images/11.jpg"];
 
         function resetPopular() {
 
@@ -295,26 +295,16 @@
         },10000);
 
 
-        $("#localIssues").click(function() {
-          changeBoolean = 1;
-          changeShowAll();
-          resetPopular();
-          $("#popularIssuesContent").css("margin-top", "-25px");
-          $("#seeAllIssues").addClass("btn-success");
-          $("#localCaret").css("display", "");
-          $(".issue").css("border", "3px solid #5cb85c");
-
-
-        });
-
         $("#stateIssues").click(function() {
           changeBoolean = 1;
           changeShowAll();
           resetPopular();
           $("#popularIssuesContent").css("margin-top", "-25px");
-          $("#seeAllIssues").addClass("btn-primary");
+          $("#seeAllIssues").addClass("btn-success");
           $("#stateCaret").css("display", "");
-          $(".issue").css("border", "3px solid #337ab7");
+          $(".issue").css("border", "3px solid black");
+
+
         });
 
         $("#nationalIssues").click(function() {
@@ -322,8 +312,18 @@
           changeShowAll();
           resetPopular();
           $("#popularIssuesContent").css("margin-top", "-25px");
-          $("#seeAllIssues").addClass("btn-danger");
+          $("#seeAllIssues").addClass("btn-primary");
           $("#nationalCaret").css("display", "");
+          $(".issue").css("border", "3px solid #337ab7");
+        });
+
+        $("#localIssues").click(function() {
+          changeBoolean = 1;
+          changeShowAll();
+          resetPopular();
+          $("#popularIssuesContent").css("margin-top", "-25px");
+          $("#seeAllIssues").addClass("btn-danger");
+          $("#localCaret").css("display", "");
           $(".issue").css("border", "3px solid #d9534f");
         });
 

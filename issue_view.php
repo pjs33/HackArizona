@@ -55,7 +55,7 @@
     }
 
     #bodyContent {
-      width: 900px;
+      width: 960px;
       margin-left: auto;
       margin-right: auto;
       height: 1000px;
@@ -104,9 +104,15 @@
       margin-right: auto;
     }
     #start_donation {
-      margin-top: 50px;
-      width: 200px;
+      margin: 30px 50px 20px 50px;
+      width: 250px;
       height: 50px;
+    }
+    #facebookButton, #twitterButton {
+      width: 200px;
+    }
+    #facebookButton {
+      margin-left: 10px;
     }
 
 
@@ -134,13 +140,15 @@
               <div><span id="remainingGoal"></span><br>left to go.</div>
 
               <button id="start_donation" type="button" class="btn btn-success">Donate Towards This!</button>
+              <img id="facebookButton" src="./css/images/share_on_facebook.png">
+              <img id="twitterButton" src="./css/images/share_on_twitter.png">
 
             </div>
           </div>
 
           <div class="progress" style="margin-top: 20px;">
             <div id="donationsTotal" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70"
-            aria-valuemin="0" aria-valuemax="100" style="width:70.5%;">
+            aria-valuemin="0" aria-valuemax="100">
             </div>
           </div>
 
@@ -155,6 +163,7 @@
             </p>
           </div>
         </div> <!--topInfo end-->
+      </div> <!--bodyContent end-->
 
   </body>
 </html>

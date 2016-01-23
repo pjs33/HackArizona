@@ -50,8 +50,8 @@
   margin: 0px;
   margin-left: 4px;
   padding: 8px;
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 37px;
+  padding-right: 37px;
   color: #dcdcdc;
   font-size: 16px;
   font-weight: 700;
@@ -102,7 +102,7 @@
     <a class="nav-bar-link btn primary-btn" href="#">About Us</a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
-    <a class="nav-bar-link btn primary-btn" href="#">Vote on Issues</a>
+    <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/issue_voting.php">Vote on Issues</a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
     <a class="nav-bar-link btn primary-btn" href="#">How It Works</a>
