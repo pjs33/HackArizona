@@ -10,7 +10,7 @@
 #header {
     margin-right: auto;
     margin-left: auto;
-    width: 960px;
+    width: 900px;
 }
 
 #page-title {
@@ -32,6 +32,7 @@
 #nav-bar {
   margin-right: auto;
   margin-left: auto;
+  min-width: 900px;
 }
 
 .nav-bar-link {
@@ -39,8 +40,8 @@
   margin: 0px;
   margin-left: 4px;
   padding: 8px;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 47px;
+  padding-right: 47px;
   color: #dcdcdc;
   font-size: 16px;
   font-weight: 700;
