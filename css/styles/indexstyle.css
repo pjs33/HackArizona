@@ -4,6 +4,12 @@ body {
     background-color:#f2f2f2;
 }
 
+#page-title {
+    font-family: 'Parisienne', cursive;
+    font-size: 30pt;
+    font-weight: 400;
+}
+
 #bodyContent {
     width: 960px;
     padding-left: 30px;

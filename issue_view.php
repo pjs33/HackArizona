@@ -96,10 +96,10 @@
               <img id="image_main" src="./css/images/default-user.png">
             </div>
             <div id="donationContainer">
-              <div><span id="peopleDonating">30</span><br>people have donated towards this project.</div>
-              <div><span id="moneyRaised">$2149.49</span><br>has been raised.</div>
+              <div><span id="peopleDonating"></span><br>people have donated towards this project.</div>
+              <div><span id="moneyRaised"></span><br>has been raised.</div>
 
-              <div><span id="remainingGoal">$4837.87</span><br>left to go.</div>
+              <div><span id="remainingGoal"></span><br>left to go.</div>
 
               <button id="start_donation" type="button" class="btn btn-success">Donate Towards This!</button>
 
@@ -124,6 +124,18 @@
             </p>
           </div>
         </div> <!--topInfo end-->
+
+        <script>
+          var peopleDonating = Math.floor(Math.random() * 9999) + 1;
+          var moneyRaised = Math.floor(Math.random() * 99999) + 1;
+          var remainingGoal = Math.floor(Math.random() * 999) + 1;
+
+          $("#peopleDonating").text(peopleDonating);
+          $("#moneyRaised").text("$"+ moneyRaised);
+          $("#remainingGoal").text("$"+ remainingGoal);
+
+
+        </script>
 
   </body>
 </html>

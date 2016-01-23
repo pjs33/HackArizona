@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>The Lobbyists</title>
 
@@ -260,7 +261,7 @@
     <script>
       $(document).ready(function() {
 
-        var randomIssues = ['Giant 2" dicks on the loose' ,"Jamal Caught Red Handed","Mans first Fap","Support Local PlayGround","Local Pothole", "Repeal X Issues", "Dog Lost", "President Obama...", "Stick In Road", "Mountain Currently Exploding...", "RANDOM BIG ISSUE"];
+        var randomIssues = ["Taylor Swift newds","LETS BUILD A WALL","BAN ALL MUSLIMS","Jamal Caught Red Handed","Support Local PlayGround","Local Pothole", "Repeal X Issues", "Dog Lost","Pet shark on the loose", "President Obama...", "Stick In Road", "Mountain Currently Exploding...", "RANDOM BIG ISSUE"];
         function resetPopular() {
 
           var arrLength = randomIssues.length;
