@@ -37,8 +37,6 @@ class DatabaseConnection {
 
 		$hash = password_hash($password, PASSWORD_DEFAULT);
 
-		$email = $username . "@company.com";
-
 		$sql = "INSERT INTO users(username, hash, name, email) VALUES(:username, :hash, :name, :email);";
 		$stmt = $this->DB->prepare( $sql );
 		$stmt->execute( array(':username' => $username, ':hash' => $hash, ':name' => $name, ':email' => $email) );
