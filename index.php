@@ -344,7 +344,10 @@
 
     </script>
 
-
+	
+<?php
+      require_once("view_components/footbar.php");
+    ?>
 
 
 
