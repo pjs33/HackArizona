@@ -49,7 +49,7 @@ body {
     overflow: auto;
 }
 
-.imgThumb {
+#imgThumb1,#imgThumb2,#imgThumb3 {
     width: 100%;
     height: 80%;
 }

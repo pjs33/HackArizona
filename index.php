@@ -234,20 +234,20 @@
           <a href="http://localhost/HackArizona/issue_view.php">
             <div class="issue">
               <h3 id="issueTitle1"></h3>
-              <img class="imgThumb" src="./css/images/imageThumb.jpg">
+              <img id="imgThumb1">
             </div>
           </a>
 
           <a href="http://localhost/HackArizona/issue_view.php">
             <div class="issue">
               <h3 id="issueTitle2"></h3>
-              <img class="imgThumb" src="./css/images/imageThumb.jpg">
+              <img id="imgThumb2">
             </div>
           </a>
           <a href="http://localhost/HackArizona/issue_view.php">
             <div class="issue">
               <h3 id="issueTitle3"></h3>
-              <img class="imgThumb" src="./css/images/imageThumb.jpg">
+              <img id="imgThumb3">
             </div>
           </a>
         </div>
@@ -261,7 +261,9 @@
     <script>
       $(document).ready(function() {
 
-        var randomIssues = ["Taylor Swift newds","LETS BUILD A WALL","BAN ALL MUSLIMS","Jamal Caught Red Handed","Support Local PlayGround","Local Pothole", "Repeal X Issues", "Dog Lost","Pet shark on the loose", "President Obama...", "Stick In Road", "Mountain Currently Exploding...", "RANDOM BIG ISSUE"];
+        var randomIssues = ["Taylor Swift newds","LETS BUILD A WALL","BAN ALL MUSLIMS","Jamal Caught Red Handed","Support Local PlayGround","Local Pothole", "Dog Lost","Pet shark on the loose", "President Obama...", "Stick In Road", "Mountain Currently Exploding..."];
+        var randomURLforIssues = ["./css/images/01.jpg","./css/images/02.jpg","./css/images/03.jpg","./css/images/04.jpg","./css/images/05.jpg","./css/images/06.jpg", "./css/images/07.jpg", "./css/images/08.jpg", "./css/images/09.jpg","./css/images/10.jpg","./css/images/11.jpg"];
+
         function resetPopular() {
 
           var arrLength = randomIssues.length;
@@ -276,8 +278,12 @@
           }
 
           $("#issueTitle1").text(randomIssues[random1]);
+          $("#imgThumb1").attr("src", randomURLforIssues[random1]);
           $("#issueTitle2").text(randomIssues[random2]);
+          $("#imgThumb2").attr("src", randomURLforIssues[random2]);
           $("#issueTitle3").text(randomIssues[random3]);
+          $("#imgThumb3").attr("src", randomURLforIssues[random3]);
+
         }
         resetPopular();
 
