@@ -28,8 +28,8 @@
       $("#moneyRaised").text("$"+ moneyRaised);
       $("#remainingGoal").text("$"+ remainingGoal);
 
-
-      var difference = (remainingGoal / moneyRaised)*100;
+      var total = moneyRaised+remainingGoal;
+      var difference = (moneyRaised / total)*100;
       var temp = difference.toString();
       if (difference > 10) {
         var percentage = temp.substring(0, 2);
