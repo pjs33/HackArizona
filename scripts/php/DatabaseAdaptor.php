@@ -24,12 +24,7 @@ class DatabaseConnection {
 	// Returns: True if Username is unique and successfully added to the database
 	// Returns: False if Username is already in database
 	public function register($username, $realname, $email, $address, $city, $state, $zipcode, $password) {
-
-		$username = htmlspecialchars($username);
-		$realname = htmlspecialchars($realname);
-		$email = htmlspecialchars($email);
-
-		$sql = "SELECT username FROM users WHERE username = :username;";
+		$sql = "SELECT username FROM users WHERE UPPER(username) = UPPER(:username);";
 		$stmt = $this->DB->prepare( $sql );
 		$stmt->execute( array(':username' => $username) );
 		$row = $stmt->fetch( PDO::FETCH_ASSOC );
@@ -66,13 +61,59 @@ class DatabaseConnection {
 		return password_verify($password, $row['password']);
 	}
 	
-	public function getUser($userid) {
-		$sql = "SELECT * FROM users WHERE userid = :userid;";
+	public function getUser($username) {
+		$sql = "SELECT * FROM users UPPER(username) = UPPER(:username);";
 		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':userid' => $userid) );
+		$stmt->execute( array(':username' => $username) );
 		$row = $stmt->fetch( PDO::FETCH_ASSOC );
 		
-		$return $row;
+		return $row;
+	}
+	
+	/*********************************************************************************************
+	 * lobbyists
+	 ********************************************************************************************/
+	public function registerLobbyist($lobbyist_username, $realname, $email, $password) {
+		$sql = "SELECT lobbyist_username FROM lobbyists WHERE UPPER(lobbyist_username) = UPPER(:lobbyist_username);";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':username' => $username) );
+		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+	
+		if($stmt->rowCount() > 0) {
+			return false;
+		}
+	
+		$hash = password_hash($password, PASSWORD_DEFAULT);
+	
+		$sql = "INSERT INTO lobbyists(lobbyist_username, realname, email, password) VALUES(:lobbyist_username, :realname, :email, :password);";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':lobbyist_username' => $lobbyist_username, ':realname' => $realname, ':email' => $email, ':password' => $hash) );
+
+		return true;
+	}
+	
+	public function verifyLobbyistLogin($lobbyist_username, $password) {
+		$sql = "SELECT password FROM lobbyists WHERE UPPER(lobbyist_username) = UPPER(:lobbyist_username);";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':lobbyist_username' => $lobbyist_username) );
+		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+	
+		// check for valid users
+		if (empty($row)) {
+			return false;
+		}
+	
+		// check password correct
+		return password_verify($password, $row['password']);
+	}
+	
+	public function getLobbyist($lobbyist_username) {
+		$sql = "SELECT * FROM lobbyists WHERE UPPER(lobbyist_username) = UPPER(:lobbyist_username);";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':lobbyist_username' => $lobbyist_username) );
+		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+	
+		return $row;
 	}
 	
 	/*********************************************************************************************
