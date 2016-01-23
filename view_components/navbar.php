@@ -94,10 +94,10 @@
     <a class="nav-bar-link btn primary-btn" href="#">Home</a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
-    <a class="nav-bar-link btn primary-btn" href="#">Subscribed Issues</a>
+    <a class="nav-bar-link btn primary-btn" href="#">About Us</a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
-    <a class="nav-bar-link btn primary-btn" href="#">Create Issue</a>
+    <a class="nav-bar-link btn primary-btn" href="#">How It Works</a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
     <a class="nav-bar-link btn primary-btn" href="#">Login</a>

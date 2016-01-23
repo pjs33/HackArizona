@@ -20,7 +20,7 @@ class DatabaseConnection {
 	// Arguments: Username [String], Password [String], Name [String]
 	// Returns: True if Username is unique and successfully added to the database
 	// Returns: False if Username is already in database
-	public function register($realname, $username, $email, $password) {
+	public function register($username, $realname, $email, $password) {
 
 		$username = htmlspecialchars($username);
 		$realname = htmlspecialchars($realname);
