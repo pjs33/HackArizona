@@ -14,8 +14,6 @@
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
     
     <style>
     .carousel-inner > .item > img,
@@ -43,16 +41,40 @@
 
     #issue-name {
       margin: 0px;
+      margin-bottom: 20px;
     } 
 
-    #topInfo, #totalRaised {
-      width: 100%;
+    #topInfo, .progress {
+      width: 900px;
+    }
+    #mainInfo {
+      overflow: auto;
+      font-size: 16pt;
+    }
+    #pictureContainer, #image_main {
+      width: 450px;
+      float: left;
+      margin-left: 10px;
     }
 
-    #userPicture {
-      width: 600px;
+    #donationContainer {
+      width: 430px;
+      float: right;
     }
 
+    #textInfo {
+      margin-top: 15px;
+    }
+    #peopleDonating, #moneyRaised, #remainingGoal {
+      font-size: 30pt;
+      color: #5cb85c;
+      width: 380px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #start_donation {
+      margin-top: 50px;
+    }
 
   </style>
 
@@ -64,20 +86,42 @@
 
     <div id="bodyContent">
       <h2 id="issue-name">Issue Name</h2>
-      
-      <div id="topInfo">
-        <div id="totalRaised">
-        </div>
-        <div id="userPicture">
-        </div>
-        <div id="">
-        </div>
 
+        <div id="topInfo">
 
-        <div id="textInfo">
-        </div>
+          <div id="mainInfo">
+            <div id="pictureContainer">
+              <img id="image_main" src="./css/images/default-user.png">
+            </div>
+            <div id="donationContainer">
+              <div><span id="peopleDonating">30</span><br>people have donated towards this project.</div>
+              <div><span id="moneyRaised">$2000</span><br>has been raised.</div>
 
-    </div>
+              <div><span id="remainingGoal">$5000</span><br>left to go</div>
+
+              <button id="start_donation" type="button" class="btn btn-success">Donate Towards This!</button>
+
+            </div>
+          </div>
+
+          <div class="progress" style="margin-top: 20px;">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100" style="width:70%;">
+              Donations 70% Complete
+            </div>
+          </div>
+
+          <h2>Issue Info</h2>
+
+          <div id="textInfo">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              <br>
+              <br>
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </p>
+          </div>
+        </div> <!--topInfo end-->
 
   </body>
 </html>
