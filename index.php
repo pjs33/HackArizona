@@ -172,12 +172,12 @@
                     <div data-u="thumb">Check out this <a href="http://localhost/HackArizona/issue_view.php">page!</a></div>
                 </div>
                 <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="./css/images/img3.jpg" />
-                    <div data-u="thumb"><a href="http://localhost/HackArizona/issue_view.php">This</a> issue is gaining a lot of popularity.</div>
-                </div>
-                <div data-p="112.50" style="display: none;">
                     <img data-u="image" src="./css/images/img4.jpg" />
                     <div data-u="thumb">Take a look into <a href="http://localhost/HackArizona/issue_view.php">this.</a> You might be interested in it!</div>
+                </div>
+                <div data-p="112.50" style="display: none;">
+                    <img data-u="image" src="./css/images/img5.jpg" />
+                    <div data-u="thumb">Fix this city today! <a href="http://localhost/HackArizona/issue_view.php">Click here!</a></div>
                 </div>
             </div>
             <!-- Thumbnail Navigator -->

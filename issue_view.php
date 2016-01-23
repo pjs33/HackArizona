@@ -74,6 +74,8 @@
     }
     #start_donation {
       margin-top: 50px;
+      width: 200px;
+      height: 50px;
     }
 
   </style>
@@ -95,9 +97,9 @@
             </div>
             <div id="donationContainer">
               <div><span id="peopleDonating">30</span><br>people have donated towards this project.</div>
-              <div><span id="moneyRaised">$2000</span><br>has been raised.</div>
+              <div><span id="moneyRaised">$2149.49</span><br>has been raised.</div>
 
-              <div><span id="remainingGoal">$5000</span><br>left to go.</div>
+              <div><span id="remainingGoal">$4837.87</span><br>left to go.</div>
 
               <button id="start_donation" type="button" class="btn btn-success">Donate Towards This!</button>
 
