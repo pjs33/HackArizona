@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Lobbying Website!</title>
-
+    <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -53,6 +53,12 @@
         width: 100%;
         margin: auto;
         height: 700px;
+    }
+
+    #page-title {
+      font-family: 'Parisienne', cursive;
+      font-size: 30pt;
+      font-weight: 400;
     }
 
     #bodyContent {
@@ -109,6 +115,7 @@
       width: 200px;
       height: 50px;
     }
+
 
   </style>
 
