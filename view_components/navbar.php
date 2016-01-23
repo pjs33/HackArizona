@@ -41,26 +41,55 @@
     display: inline;
     margin: 2px;
 }
+
+.univ-header-bg {
+  width: 100%;
+  height: 164px;
+  background: #0c234b;
+  border-top: #ab0520 solid 40px;
+    position: relative;
+}
+
+.univ-header {
+    margin-right: auto;
+    margin-left: auto;
+    width: 960px;
+}
+
+
+.univ-header-bg .univ-header {
+    position: relative;
+}
+
+#page-title {
+  color: white;
+}
 </style>
 
-
+<header class="page-row">
+  <div class="univ-header-bg">
+    <div class="univ-header">
+      <h1 id="page-title">Header</h1>
+    </div>
+  </div>
+</header>
 <!-- NAVBAR -->
 <div id="nav-bar-container" data-spy="affix" data-offset-top="164">
-        <div id="nav-bar">
-            <div class="nav-link-separator"></div>
-            <div class="nav-link-separator"></div>
-            <a class="nav-bar-link btn primary-btn" href="#">Home</a>
-            <div class="nav-link-separator"></div>
-            <div class="nav-link-separator"></div>
-            <a class="nav-bar-link btn primary-btn" href="#">Subscribed Issues</a>
-            <div class="nav-link-separator"></div>
-            <div class="nav-link-separator"></div>
-            <a class="nav-bar-link btn primary-btn" href="#">Create Issue</a>
-            <div class="nav-link-separator"></div>
-            <div class="nav-link-separator"></div>
-            <a class="nav-bar-link btn primary-btn" href="#">Login</a>
-            <div class="nav-link-separator"></div>
-            <div class="nav-link-separator"></div>
-        </div>
-    </div>
+  <div id="nav-bar">
+    <div class="nav-link-separator"></div>
+    <div class="nav-link-separator"></div>
+    <a class="nav-bar-link btn primary-btn" href="#">Home</a>
+    <div class="nav-link-separator"></div>
+    <div class="nav-link-separator"></div>
+    <a class="nav-bar-link btn primary-btn" href="#">Subscribed Issues</a>
+    <div class="nav-link-separator"></div>
+    <div class="nav-link-separator"></div>
+    <a class="nav-bar-link btn primary-btn" href="#">Create Issue</a>
+    <div class="nav-link-separator"></div>
+    <div class="nav-link-separator"></div>
+    <a class="nav-bar-link btn primary-btn" href="#">Login</a>
+    <div class="nav-link-separator"></div>
+    <div class="nav-link-separator"></div>
+  </div>
+</div>
 <!-- END NAVBAR -->
