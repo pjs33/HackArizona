@@ -44,6 +44,16 @@
     #issue-name {
       margin: 0px;
     } 
+
+    #topInfo, #totalRaised {
+      width: 100%;
+    }
+
+    #userPicture {
+      width: 600px;
+    }
+
+
   </style>
 
   </head>
@@ -54,6 +64,19 @@
 
     <div id="bodyContent">
       <h2 id="issue-name">Issue Name</h2>
+      
+      <div id="topInfo">
+        <div id="totalRaised">
+        </div>
+        <div id="userPicture">
+        </div>
+        <div id="">
+        </div>
+
+
+        <div id="textInfo">
+        </div>
+
     </div>
 
   </body>
