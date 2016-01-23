@@ -11,10 +11,10 @@ INSERT INTO donation(fk_userID, fk_issueID, money_amount) VALUES ("5", "4", "288
 INSERT INTO donation(fk_userID, fk_issueID, money_amount) VALUES ("2", "4", "99882"); 
 INSERT INTO donation(fk_userID, fk_issueID, money_amount) VALUES ("2", "4", "887"); 
 
-INSERT INTO users(realname, username, email, isLobbyist, password) VALUES ("Pierre Swaguaros", "ps", "psaguaros@gmail.com", FALSE, "[Insert#HashEquivalent#]");
-INSERT INTO users(realname, username, email, isLobbyist, password) VALUES ("Mikail Lolwelling Sempai", "mls", "br0ny4lyf3@aol.com",  TRUE, "[Insert#HashEquivalent#]");
-INSERT INTO users(realname, username, email, isLobbyist, password) VALUES ("Michelle Dirty Sanchez", "ms", "msanchez@gmail.com",  FALSE, "[Insert#HashEquivalent#]");
-INSERT INTO users(realname, username, email, isLobbyist, password) VALUES ("Danielle Shitzu", "ds", "dShitzu@gmail.com",  FALSE, "[Insert#HashEquivalent#]");
-INSERT INTO users(realname, username, email, isLobbyist, password) VALUES ("Ruby Girl", "rg", "girlpower@gmail.com",  TRUE, "[Insert#HashEquivalent#]");
+INSERT INTO users(realname, username, email, isLobbyist, password) VALUES ("Pierre Swaguaros", "ps", "psaguaros@gmail.com", "FALSE", "[Insert#HashEquivalent#]");
+INSERT INTO users(realname, username, email, isLobbyist, password) VALUES ("Mikail Lolwelling Sempai", "mls", "br0ny4lyf3@aol.com",  "TRUE", "[Insert#HashEquivalent#]");
+INSERT INTO users(realname, username, email, isLobbyist, password) VALUES ("Michelle Dirty Sanchez", "ms", "msanchez@gmail.com",  "FALSE", "[Insert#HashEquivalent#]");
+INSERT INTO users(realname, username, email, isLobbyist, password) VALUES ("Danielle Shitzu", "ds", "dShitzu@gmail.com",  "FALSE", "[Insert#HashEquivalent#]");
+INSERT INTO users(realname, username, email, isLobbyist, password) VALUES ("Ruby Girl", "rg", "girlpower@gmail.com",  "TRUE", "[Insert#HashEquivalent#]");
 
 
