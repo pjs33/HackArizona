@@ -14,7 +14,7 @@ CREATE TABLE users
 CREATE TABLE issues 
 (
 	issue_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	name VARCHAR(255) NOT NULL,
+	issue_name VARCHAR(255) NOT NULL,
 	goal_amount INT NOT NULL,
 	current_amount INT NOT NULL,
 	donors INT NOT NULL,
