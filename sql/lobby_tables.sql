@@ -27,8 +27,8 @@ CREATE TABLE issues
 (
 	issue_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	issue_name VARCHAR(255) NOT NULL,
-	issue_start_date DATETIME NOT NULL;
-	issue_end_date DATETIME NOT NULL;
+	issue_start_date DATETIME NOT NULL,
+	issue_end_date DATETIME NOT NULL,
 	goal_amount INT NOT NULL,
 	current_amount INT NOT NULL,
 	num_donors INT NOT NULL,
