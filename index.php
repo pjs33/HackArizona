@@ -103,7 +103,6 @@
             .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
             .jssorb01 .av { background-color: #fff; }
             .jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
-
             /* jssor slider arrow navigator skin 05 css */
             /*
             .jssora05l                  (normal)
@@ -128,7 +127,6 @@
             .jssora05r:hover { background-position: -190px -40px; }
             .jssora05l.jssora05ldn { background-position: -250px -40px; }
             .jssora05r.jssora05rdn { background-position: -310px -40px; }
-
             /* jssor slider thumbnail navigator skin 09 css */
             
             .jssort09-600-45 .p {
@@ -259,14 +257,17 @@
 
     <script>
       $(document).ready(function() {
-
         var changeBoolean = 0;
+<<<<<<< Updated upstream
 
         var randomIssues = ["TayTay Today","LETS BUILD A WALL","Support Local PlayGround","Local Pothole", 'Dog "Lost"',"Pet shark on the loose", "President Obama...", "Stick In Road", "Mountain Currently Exploding..."];
         var randomURLforIssues = ["./css/images/01.jpg","./css/images/02.jpg","./css/images/05.jpg","./css/images/06.jpg", "./css/images/07.jpg", "./css/images/08.jpg", "./css/images/09.jpg","./css/images/10.jpg","./css/images/11.jpg"];
 
+=======
+        var randomIssues = ["Taylor Swift newds","LETS BUILD A WALL","BAN ALL MUSLIMS","Jamal Caught Red Handed","Support Local PlayGround","Local Pothole", 'Dog "Lost"',"Pet shark on the loose", "President Obama...", "Stick In Road", "Mountain Currently Exploding..."];
+        var randomURLforIssues = ["./css/images/01.jpg","./css/images/02.jpg","./css/images/03.jpg","./css/images/04.jpg","./css/images/05.jpg","./css/images/06.jpg", "./css/images/07.jpg", "./css/images/08.jpg", "./css/images/09.jpg","./css/images/10.jpg","./css/images/11.jpg"];
+>>>>>>> Stashed changes
         function resetPopular() {
-
           var arrLength = randomIssues.length;
           var random1 = Math.floor(Math.random() * arrLength);
           var random2 = Math.floor(Math.random() * arrLength);  
@@ -277,30 +278,32 @@
           while (random3 == random2 || random3 == random1) {
             random3 = Math.floor(Math.random() * arrLength);  
           }
-
           $("#issueTitle1").text(randomIssues[random1]);
           $("#imgThumb1").attr("src", randomURLforIssues[random1]);
           $("#issueTitle2").text(randomIssues[random2]);
           $("#imgThumb2").attr("src", randomURLforIssues[random2]);
           $("#issueTitle3").text(randomIssues[random3]);
           $("#imgThumb3").attr("src", randomURLforIssues[random3]);
-
         }
         resetPopular();
-
         setInterval(function() {
             if (changeBoolean == 0) {
               resetPopular();
             }
         },10000);
+<<<<<<< Updated upstream
 
 
         $("#stateIssues").click(function() {
+=======
+        $("#localIssues").click(function() {
+>>>>>>> Stashed changes
           changeBoolean = 1;
           changeShowAll();
           resetPopular();
           $("#popularIssuesContent").css("margin-top", "-25px");
           $("#seeAllIssues").addClass("btn-success");
+<<<<<<< Updated upstream
           $("#stateCaret").css("display", "");
           $(".issue").css("border", "3px solid black");
 
@@ -308,6 +311,12 @@
         });
 
         $("#nationalIssues").click(function() {
+=======
+          $("#localCaret").css("display", "");
+          $(".issue").css("border", "3px solid #5cb85c");
+        });
+        $("#stateIssues").click(function() {
+>>>>>>> Stashed changes
           changeBoolean = 1;
           changeShowAll();
           resetPopular();
@@ -316,8 +325,12 @@
           $("#nationalCaret").css("display", "");
           $(".issue").css("border", "3px solid #337ab7");
         });
+<<<<<<< Updated upstream
 
         $("#localIssues").click(function() {
+=======
+        $("#nationalIssues").click(function() {
+>>>>>>> Stashed changes
           changeBoolean = 1;
           changeShowAll();
           resetPopular();
@@ -326,12 +339,7 @@
           $("#localCaret").css("display", "");
           $(".issue").css("border", "3px solid #d9534f");
         });
-
       });
-
-
-
-
       function changeShowAll() {
         $("#localCaret").css("display", "none");
         $("#stateCaret").css("display", "none");
@@ -341,13 +349,13 @@
         $("#seeAllIssues").removeClass("btn-primary");
         $("#seeAllIssues").removeClass("btn-danger");
       }
-
     </script>
-
-
-
-
-
+    
+    <?php
+      
+      require_once("view_components/footbar.php");
+    ?>
+    
 
   </body>
 </html>
