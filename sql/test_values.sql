@@ -39,5 +39,3 @@ INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("bfett", "3",
 INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("daddyproblems", "4", TRUE);
 INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("pdameron", "1", FALSE);
 INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("cdooku", "2", TRUE);
-INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("", "", "");
-INSERT INTO votes(fk_username, fk_issue_id, support_issue) VALUES ("", "", "");
