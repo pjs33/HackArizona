@@ -16,6 +16,9 @@
 #page-title {
   color: white;
   text-align: center;
+  font-family: 'Parisienne', cursive;
+  font-size: 30pt;
+  font-weight: 400;
 }
 
 #header-container #header {
@@ -76,6 +79,7 @@
 }
 
 </style>
+<link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
 
 <header class="page-row">
   <div id="header-container">
