@@ -87,6 +87,13 @@
 
     #buttonContainer {
       margin-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    #listOfIssues {
+      margin-left: 20px;
+      margin-right: 20px;
     }
 
 
@@ -99,6 +106,9 @@
     ?>
 
     <div id="bodyContent">
+
+      <button style="margin-left: auto; margin-right: auto;">Submit new issue</button>
+
       <h2 id="votingHeader">
         Vote on Issues
       </h2>
@@ -107,15 +117,15 @@
         
         <div class="row">
           <div id="localIssues" class="col-sm-4">
-            <a type="button" class="btn btn-danger btn-block"><span class="glyphicon glyphicon-edit"></span>Local</a>
+            <a type="button" class="btn btn-danger btn-block">Local</a>
             <span id="localCaret" style="color: #d9534f; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
           </div>
           <div id="stateIssues" class="col-sm-4">
-             <a type="button" class="btn btn-default btn-block"><span class="glyphicon glyphicon-edit"></span>State</a>   
+             <a type="button" class="btn btn-default btn-block">State</a>   
              <span id="stateCaret" style="color: black; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
           </div>
           <div id="nationalIssues" class="col-sm-4">
-            <a type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-edit"></span>National</a>
+            <a type="button" class="btn btn-primary btn-block">National</a>
             <span id="nationalCaret" style="color: #337ab7; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
           </div>
         </div>

@@ -49,6 +49,7 @@ body {
 #imgThumb1,#imgThumb2,#imgThumb3 {
     width: 100%;
     height: 80%;
+    overflow:none;
 }
 
 #popularIssuesContent {
