@@ -261,7 +261,7 @@
     <script>
       $(document).ready(function() {
 
-        var randomIssues = ["Taylor Swift newds","LETS BUILD A WALL","BAN ALL MUSLIMS","Jamal Caught Red Handed","Support Local PlayGround","Local Pothole", "Dog Lost","Pet shark on the loose", "President Obama...", "Stick In Road", "Mountain Currently Exploding..."];
+        var randomIssues = ["Taylor Swift newds","LETS BUILD A WALL","BAN ALL MUSLIMS","Jamal Caught Red Handed","Support Local PlayGround","Local Pothole", 'Dog "Lost"',"Pet shark on the loose", "President Obama...", "Stick In Road", "Mountain Currently Exploding..."];
         var randomURLforIssues = ["./css/images/01.jpg","./css/images/02.jpg","./css/images/03.jpg","./css/images/04.jpg","./css/images/05.jpg","./css/images/06.jpg", "./css/images/07.jpg", "./css/images/08.jpg", "./css/images/09.jpg","./css/images/10.jpg","./css/images/11.jpg"];
 
         function resetPopular() {
