@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Lobbying Website!</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -28,7 +28,7 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#">Lobbying Website!</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
@@ -58,19 +58,19 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="img_chania.jpg" alt="Chania" width="460" height="345">
+        <a href="https://www.google.com/" target="_blank"><img src="./css/images/img1.jpg" alt="img1" width="460" height="345"></a>
       </div>
 
       <div class="item">
-        <img src="img_chania2.jpg" alt="Chania" width="460" height="345">
+        <img src="./css/images/img2.jpg" alt="img2" width="460" height="345">
       </div>
     
       <div class="item">
-        <img src="img_flower.jpg" alt="Flower" width="460" height="345">
+        <img src="./css/images/img3.jpg" alt="img3" width="460" height="345">
       </div>
 
       <div class="item">
-        <img src="img_flower2.jpg" alt="Flower" width="460" height="345">
+        <img src="./css/images/img4.jpg" alt="img4" width="460" height="345">
       </div>
     </div>
 
