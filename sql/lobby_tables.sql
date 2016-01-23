@@ -7,7 +7,7 @@ CREATE TABLE issues (
 	picture VARCHAR(255) NOT NULL,
 	fk_lobbyistID VARCHAR(255) NOT NULL,
 	
-	FOREIGN KEY (fk_lobbyistID) REFERENCES lobbyist(lobbyistID)
+	FOREIGN KEY (fk_lobbyistID) REFERENCES users(userID)
 );
 
 CREATE TABLE donation
@@ -27,11 +27,6 @@ CREATE TABLE users
 	realname VARCHAR(255) NOT NULL,
 	username VARCHAR(255) NOT NULL,
 	email VARCHAR(255) NOT NULL,
-	password VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE lobbyist
-(
-	lobbyistID NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	lobbyist_name VARCHAR(255) NOT NULL;
+	isLobbyist BOOLEAN NOT NULL;
+	password VARCHAR(255) NOT NULL,
 );
