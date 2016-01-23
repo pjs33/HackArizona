@@ -74,7 +74,8 @@
   </div>
 </header>
 <!-- NAVBAR -->
-<div id="nav-bar-container" data-spy="affix" data-offset-top="164">
+<!-- data-spy="affix" data-offset-top="164" -->
+<div id="nav-bar-container" >
   <div id="nav-bar">
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
