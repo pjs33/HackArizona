@@ -14,13 +14,6 @@ body {
     background-color: white;
 
 }
-
-.carousel-inner > .item > img,
-    .carousel-inner > .item > a > img {
-        width: 900px;
-        margin: auto;
-        height: 450px;
-    }
     
 .col-sm-4 {
 	text-align: center;
