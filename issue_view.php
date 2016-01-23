@@ -97,7 +97,7 @@
               <div><span id="peopleDonating">30</span><br>people have donated towards this project.</div>
               <div><span id="moneyRaised">$2000</span><br>has been raised.</div>
 
-              <div><span id="remainingGoal">$5000</span><br>left to go</div>
+              <div><span id="remainingGoal">$5000</span><br>left to go.</div>
 
               <button id="start_donation" type="button" class="btn btn-success">Donate Towards This!</button>
 

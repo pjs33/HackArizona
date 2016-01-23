@@ -166,23 +166,23 @@
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 900px; height: 450px; overflow: hidden;">
             <div data-p="112.50" style="display: none;">
                 <img data-u="image" src="./css/images/img1.jpg" />
-                <div data-u="thumb">This is a test link <a href="https://google.com" target="_blank">click here</a></div>
+                <div data-u="thumb">This is a test link! <a href="http://localhost/HackArizona/issue_view.php">Click here!</a></div>
             </div>
             <div data-p="112.50" style="display: none;">
                 <img data-u="image" src="./css/images/img2.jpg" />
-                <div data-u="thumb">Did you drag by either horizontal or vertical?</div>
+                <div data-u="thumb">Check out this <a href="http://localhost/HackArizona/issue_view.php">page!</a></div>
             </div>
             <div data-p="112.50" style="display: none;">
                 <img data-u="image" src="./css/images/img3.jpg" />
-                <div data-u="thumb">Do you notice navigator responses when drag?</div>
+                <div data-u="thumb"><a href="http://localhost/HackArizona/issue_view.php">This</a> issue is gaining a lot of popularity.</div>
             </div>
             <div data-p="112.50" style="display: none;">
                 <img data-u="image" src="./css/images/img4.jpg" />
-                <div data-u="thumb">Do you notice arrow responses when click?</div>
+                <div data-u="thumb">Take a look into <a href="http://localhost/HackArizona/issue_view.php">this. </a>You might be interested in it!</div>
             </div>
         </div>
         <!-- Thumbnail Navigator -->
-        <div data-u="thumbnavigator" class="jssort09-600-45" style="position:absolute;bottom:0px;left:0px;width:900px;height:45px;">
+        <div data-u="thumbnavigator" class="jssort09-600-45" style="position:absolute;bottom:0px;left:0px;width:900px;height:45px;text-align:center;">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=40.0); opacity:0.4;"></div>
             <!-- Thumbnail Item Skin Begin -->
             <div data-u="slides" style="cursor: default;">
@@ -199,7 +199,6 @@
         <!-- Arrow Navigator -->
         <span data-u="arrowleft" class="jssora05l" style="top:0px;left:8px;width:40px;height:40px;" data-autocenter="2"></span>
         <span data-u="arrowright" class="jssora05r" style="top:0px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
-        <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
     </div>
 
     <!-- #endregion Jssor Slider End -->
@@ -210,13 +209,13 @@
     
     <div class="row">
       <div class="col-sm-4">
-  	    <a href="#" type="button" class="btn btn-danger btn-block"><span class="glyphicon glyphicon-edit"></span> Local</a>
+  	    <a href="#" type="button" class="btn btn-danger btn-block"><span class="glyphicon glyphicon-edit"></span>Local</a>
       </div>
       <div class="col-sm-4">
-         <a href="#" type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-edit"></span> State</a>		
+         <a href="#" type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-edit"></span>State</a>		
       </div>
       <div class="col-sm-4">
-        <a href="#" type="button" class="btn btn-danger btn-block"><span class="glyphicon glyphicon-edit"></span> National</a>
+        <a href="#" type="button" class="btn btn-danger btn-block"><span class="glyphicon glyphicon-edit"></span>National</a>
       </div>
     </div>
   </div>
