@@ -25,9 +25,10 @@
 #nav-bar-container {
   width: 100%;
   height: 45px;
-  background: rgba(30,30,30,0.8);
+  background: rgba(30,30,30,0.9);
   text-align: center;
   padding-top: 3px;
+  z-index: 1000;
 }
 
 #nav-bar-place-holder {
@@ -79,7 +80,7 @@
 <header class="page-row">
   <div id="header-container">
     <div id="header">
-      <h1 id="page-title">Website Name</h1>
+      <h1 id="page-title">The Lobbyists</h1>
     </div>
   </div>
 </header>

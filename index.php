@@ -230,18 +230,25 @@
       <div id="popularIssuesContent">
 
         <div id="popularIssues">
-          <div class="issue">
-            <h3 class="issueTitle">Local Pothole</h3>
-            <img class="imgThumb" src="./css/images/imageThumb.jpg">
-          </div>
-          <div class="issue">
-            <h3 class="issueTitle">Repeal X Issue</h3>
-            <img class="imgThumb" src="./css/images/imageThumb.jpg">
-          </div>
-          <div class="issue">
-            <h3 class="issueTitle">President Obama...</h3>
-            <img class="imgThumb" src="./css/images/imageThumb.jpg">
-          </div>
+          <a href="http://localhost/HackArizona/issue_view.php">
+            <div class="issue">
+              <h3 id="issueTitle1"></h3>
+              <img class="imgThumb" src="./css/images/imageThumb.jpg">
+            </div>
+          </a>
+
+          <a href="http://localhost/HackArizona/issue_view.php">
+            <div class="issue">
+              <h3 id="issueTitle2"></h3>
+              <img class="imgThumb" src="./css/images/imageThumb.jpg">
+            </div>
+          </a>
+          <a href="http://localhost/HackArizona/issue_view.php">
+            <div class="issue">
+              <h3 id="issueTitle3"></h3>
+              <img class="imgThumb" src="./css/images/imageThumb.jpg">
+            </div>
+          </a>
         </div>
 
         <a id="seeAllIssues" href="#" type="button" class="btn btn-info btn-block"><span class="glyphicon glyphicon-edit"></span>See All Issues</a>
@@ -253,29 +260,59 @@
     <script>
       $(document).ready(function() {
 
+        var randomIssues = ['Giant 2" dicks on the loose' ,"Jamal Caught Red Handed","Mans first Fap","Support Local PlayGround","Local Pothole", "Repeal X Issues", "Dog Lost", "President Obama...", "Stick In Road", "Mountain Currently Exploding...", "RANDOM BIG ISSUE"];
+        function resetPopular() {
 
-          $("#localIssues").click(function() {
-            changeShowAll();
-            $("#seeAllIssues").addClass("btn-success");
-            $("#localCaret").css("display", "");
-            $(".issue").css("border", "3px solid #5cb85c");
+          var arrLength = randomIssues.length;
+          var random1 = Math.floor(Math.random() * arrLength);
+          var random2 = Math.floor(Math.random() * arrLength);  
+          while (random2 == random1) {
+            random2 = Math.floor(Math.random() * arrLength);  
+          }
+          var random3 = Math.floor(Math.random() * arrLength);   
+          while (random3 == random2 || random3 == random1) {
+            random3 = Math.floor(Math.random() * arrLength);  
+          }
+
+          $("#issueTitle1").text(randomIssues[random1]);
+          $("#issueTitle2").text(randomIssues[random2]);
+          $("#issueTitle3").text(randomIssues[random3]);
+        }
+        resetPopular();
+
+        setInterval(function() {
+            resetPopular();
+        },10000);
 
 
-          });
+        $("#localIssues").click(function() {
+          changeShowAll();
+          resetPopular();
+          $("#popularIssuesContent").css("margin-top", "-25px");
+          $("#seeAllIssues").addClass("btn-success");
+          $("#localCaret").css("display", "");
+          $(".issue").css("border", "3px solid #5cb85c");
 
-          $("#stateIssues").click(function() {
-            changeShowAll();
-            $("#seeAllIssues").addClass("btn-primary");
-            $("#stateCaret").css("display", "");
-            $(".issue").css("border", "3px solid #337ab7");
-          });
 
-          $("#nationalIssues").click(function() {
-            changeShowAll();
-            $("#seeAllIssues").addClass("btn-danger");
-            $("#nationalCaret").css("display", "");
-            $(".issue").css("border", "3px solid #d9534f");
-          });
+        });
+
+        $("#stateIssues").click(function() {
+          changeShowAll();
+          resetPopular();
+          $("#popularIssuesContent").css("margin-top", "-25px");
+          $("#seeAllIssues").addClass("btn-primary");
+          $("#stateCaret").css("display", "");
+          $(".issue").css("border", "3px solid #337ab7");
+        });
+
+        $("#nationalIssues").click(function() {
+          changeShowAll();
+          resetPopular();
+          $("#popularIssuesContent").css("margin-top", "-25px");
+          $("#seeAllIssues").addClass("btn-danger");
+          $("#nationalCaret").css("display", "");
+          $(".issue").css("border", "3px solid #d9534f");
+        });
 
       });
 
