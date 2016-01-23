@@ -9,18 +9,10 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" href="./css/styles/indexstyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
-    <style>
-    .carousel-inner > .item > img,
-    .carousel-inner > .item > a > img {
-        width: 100%;
-        margin: auto;
-        height: 700px;
-    }
-  </style>
 
   </head>
   <body>
@@ -75,6 +67,24 @@
 
 <!-- END CAROUSEL -->
 
+<!-- START COLUMN BUTTONS -->
+
+<div class="container">
+  
+  <div class="row">
+    <div class="col-sm-4">
+	    <a href="#" type="button" class="btn btn-danger btn-block"><span class="glyphicon glyphicon-edit"></span> Local</a>
+    </div>
+    <div class="col-sm-4">
+       <a href="#" type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-edit"></span> State</a>		
+    </div>
+    <div class="col-sm-4">
+      <a href="#" type="button" class="btn btn-danger btn-block"><span class="glyphicon glyphicon-edit"></span> National</a>
+    </div>
+  </div>
+</div>
+
+<!-- END COLUMN BUTTONS -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
