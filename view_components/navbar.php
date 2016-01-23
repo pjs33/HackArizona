@@ -102,6 +102,9 @@
     <a class="nav-bar-link btn primary-btn" href="#">About Us</a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
+    <a class="nav-bar-link btn primary-btn" href="#">Vote on Issues</a>
+    <div class="nav-link-separator"></div>
+    <div class="nav-link-separator"></div>
     <a class="nav-bar-link btn primary-btn" href="#">How It Works</a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
