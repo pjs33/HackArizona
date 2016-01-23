@@ -91,7 +91,7 @@
   <div id="nav-bar">
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
-    <a class="nav-bar-link btn primary-btn" href="#">Home</a>
+    <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona">Home</a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
     <a class="nav-bar-link btn primary-btn" href="#">About Us</a>
