@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
     
     <style>
     .carousel-inner > .item > img,
@@ -18,6 +23,20 @@
         width: 100%;
         margin: auto;
         height: 700px;
+    }
+
+    #bodyContent {
+      width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 1000px;
+      box-shadow: 0 0 10px #888888;
+      border-radius: 0px 0px 10px 10px;
+      background: white;
+    }
+
+    body {
+      background: #f2f2f2;
     }
   </style>
 
@@ -27,13 +46,8 @@
       require_once("view_components/navbar.php");
     ?>
 
-    <div id="body-content" style="width: 800px: margin: auto; border: 1px solid black; height: 100%;">
-
+    <div id="bodyContent">
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

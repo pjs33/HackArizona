@@ -29,6 +29,11 @@
   padding-top: 3px;
 }
 
+#nav-bar-place-holder {
+  width: 100%;
+  height: 45px;
+}
+
 #nav-bar {
   margin-right: auto;
   margin-left: auto;
@@ -63,6 +68,11 @@
     display: inline;
     margin: 2px;
 }
+
+#nav-bar-container.affix {
+  top:0px;
+}
+
 </style>
 
 <header class="page-row">
@@ -74,8 +84,9 @@
 </header>
 
 <!-- NAVBAR -->
-<!-- data-spy="affix" data-offset-top="164" -->
-<div id="nav-bar-container" >
+<!--  -->
+<div id="nav-bar-place-holder">
+<div id="nav-bar-container" data-spy="affix" data-offset-top="100">
   <div id="nav-bar">
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
@@ -92,5 +103,6 @@
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
   </div>
+</div>
 </div>
 <!-- END NAVBAR -->
