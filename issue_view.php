@@ -33,11 +33,17 @@
       box-shadow: 0 0 10px #888888;
       border-radius: 0px 0px 10px 10px;
       background: white;
+      text-align: center;
+      padding-top: 30px;
     }
 
     body {
       background: #f2f2f2;
     }
+
+    #issue-name {
+      margin: 0px;
+    } 
   </style>
 
   </head>
@@ -47,6 +53,7 @@
     ?>
 
     <div id="bodyContent">
+      <h2 id="issue-name">Issue Name</h2>
     </div>
 
   </body>

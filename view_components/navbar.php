@@ -45,8 +45,8 @@
   margin: 0px;
   margin-left: 4px;
   padding: 8px;
-  padding-left: 47px;
-  padding-right: 47px;
+  padding-left: 45px;
+  padding-right: 45px;
   color: #dcdcdc;
   font-size: 16px;
   font-weight: 700;
@@ -64,9 +64,9 @@
 }
 
 .nav-link-separator {
-    border-right: 1px solid white;
-    display: inline;
-    margin: 2px;
+  border-right: 1px solid white;
+  display: inline;
+  margin: 2px;
 }
 
 #nav-bar-container.affix {
