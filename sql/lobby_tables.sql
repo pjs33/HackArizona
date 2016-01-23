@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS donations;
 DROP TABLE IF EXISTS issues;
-DROP TABLE IF EXISTS lobbyist;
+DROP TABLE IF EXISTS lobbyists;
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE users
@@ -8,29 +8,34 @@ CREATE TABLE users
 	username VARCHAR(255) NOT NULL PRIMARY KEY,
 	realname VARCHAR(255) NOT NULL,
 	email VARCHAR(255) NOT NULL,
+	address VARCHAR(255) NOT NULL,
+	city VARCHAR(255) NOT NULL,
+	state VARCHAR(255) NOT NULL,
+	zipcode INT NOT NULL,
 	password VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE lobbyist
+CREATE TABLE lobbyists
 (
-	lobbyist_username VARCHAR(255) NOT NULL PRIMARY KEY;
+	lobbyist_username VARCHAR(255) NOT NULL PRIMARY KEY,
 	realname VARCHAR(255) NOT NULL,
 	email VARCHAR(255) NOT NULL,
 	password VARCHAR(255) NOT NULL
-
 );
 
 CREATE TABLE issues 
 (
 	issue_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	issue_name VARCHAR(255) NOT NULL,
+	issue_start_date DATETIME NOT NULL;
+	issue_end_date DATETIME NOT NULL;
 	goal_amount INT NOT NULL,
 	current_amount INT NOT NULL,
-	donors INT NOT NULL,
+	num_donors INT NOT NULL,
 	picture VARCHAR(255) NOT NULL,
 	fk_lobbyist_username VARCHAR(255) NOT NULL,
 	
-	FOREIGN KEY (fk_lobbyist_username) REFERENCES lobbyist(lobbyist_username)
+	FOREIGN KEY (fk_lobbyist_username) REFERENCES lobbyists(lobbyist_username)
 );
 
 CREATE TABLE donations
