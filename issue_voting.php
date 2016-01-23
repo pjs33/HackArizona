@@ -33,7 +33,7 @@
       border-radius: 0px 0px 10px 10px;
       background: white;
       text-align: center;
-      padding-top: 30px;
+      padding-top: 10px;
     }
 
     body {
@@ -66,7 +66,7 @@
     #textInfo {
       margin-top: 15px;
     }
-    
+
     #peopleDonating, #moneyRaised, #remainingGoal {
       font-size: 30pt;
       color: #5cb85c;
@@ -81,6 +81,14 @@
       height: 50px;
     }
 
+    #votingHeader {
+      margin-bottom: 20px;
+    }
+
+    #buttonContainer {
+      margin-bottom: 20px;
+    }
+
 
   </style>
 
@@ -91,7 +99,106 @@
     ?>
 
     <div id="bodyContent">
-      
+      <h2 id="votingHeader">
+        Vote on Issues
+      </h2>
+
+      <div id="buttonContainer">
+        
+        <div class="row">
+          <div id="localIssues" class="col-sm-4">
+            <a type="button" class="btn btn-danger btn-block"><span class="glyphicon glyphicon-edit"></span>Local</a>
+            <span id="localCaret" style="color: #d9534f; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+          </div>
+          <div id="stateIssues" class="col-sm-4">
+             <a type="button" class="btn btn-default btn-block"><span class="glyphicon glyphicon-edit"></span>State</a>   
+             <span id="stateCaret" style="color: black; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+          </div>
+          <div id="nationalIssues" class="col-sm-4">
+            <a type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-edit"></span>National</a>
+            <span id="nationalCaret" style="color: #337ab7; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+      <!-- END COLUMN BUTTONS -->
+
+      <div id="listOfIssues">
+        
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
+                <h3 class="panel-title">Issue #1</h3>
+            </div>
+            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
+                <h3 class="panel-title">Issue #2</h3>
+            </div>
+            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
+                <h3 class="panel-title">Issue #3</h3>
+            </div>
+            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
+                <h3 class="panel-title">Issue #4</h3>
+            </div>
+            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
+                <h3 class="panel-title">Issue #5</h3>
+            </div>
+            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
+                <h3 class="panel-title">Issue #6</h3>
+            </div>
+            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
+                <h3 class="panel-title">Issue #7</h3>
+            </div>
+            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
+                <h3 class="panel-title">Issue #8</h3>
+            </div>
+            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
+                <h3 class="panel-title">Issue #9</h3>
+            </div>
+            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
+                <h3 class="panel-title">Issue #10</h3>
+            </div>
+            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+        </div>
+
+      </div>
+
+
+
     </div> <!--bodyContent End-->
 
   </body>

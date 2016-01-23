@@ -42,7 +42,7 @@
 #nav-bar {
   margin-right: auto;
   margin-left: auto;
-  min-width: 900px;
+  min-width: 960px;
 }
 
 .nav-bar-link {
