@@ -44,10 +44,10 @@
 
 .univ-header-bg {
   width: 100%;
-  height: 164px;
+  height: 80px;
   background: #0c234b;
-  border-top: #ab0520 solid 40px;
-    position: relative;
+  border-top: #ab0520 solid 20px;
+  position: relative;
 }
 
 .univ-header {
