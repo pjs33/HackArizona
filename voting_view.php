@@ -1,4 +1,8 @@
 <?php 
+  require_once("/scripts/php/session_management.php");
+?>
+
+<?php 
 
   require_once("/scripts/php/DatabaseAdaptor.php");
   $model = new DatabaseConnection();

@@ -154,7 +154,11 @@
 
               <div><span id="remainingGoal">$<?php echo $remaining; ?></span><br>left to go.</div>
 
-              <button id="start_donation" type="button" class="btn btn-success">Donate Towards This!</button>
+              <?php if( isset($_SESSION["username"]) ) { ?>
+                <button id="start_donation" type="button" class="btn btn-success">Donate Towards This!</button>
+              <?php } else { ?>
+                <a href="http://localhost/HackArizona/login.php"><button id="start_donation" type="button" class="btn btn-success">Login To Donate</button></a>
+              <?php } ?>
               <img id="facebookButton" src="./css/images/share_on_facebook.png">
               <img id="twitterButton" src="./css/images/share_on_twitter.png">
 
