@@ -118,5 +118,9 @@
       </div>
     </div> <!--bodyContent end-->
 
+<?php
+      require_once("view_components/footbar.php");
+    ?>
+
   </body>
 </html>
