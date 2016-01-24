@@ -124,7 +124,7 @@
           <input type="text" name="zipcode" placeholder="Zipcode"><br>
 
           <input type="password" name="password" placeholder="Password"><br>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" name="signup">
         </form>
       </div>
     </div> <!--bodyContent end-->
