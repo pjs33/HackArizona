@@ -274,7 +274,7 @@ class DatabaseConnection {
 		$stmt->execute( array(':fk_issue_id' => $fk_issue_id) );
 		$row = $stmt->fetchAll( PDO::FETCH_ASSOC );
 		
-		return $count($row);
+		return count($row);
 	}
 	
 	public function donatedTo($fk_username) {
