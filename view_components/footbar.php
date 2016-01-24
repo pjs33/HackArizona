@@ -1,7 +1,7 @@
 <style>
 
 #container {
-	border-bottom:5px solid #0c234b;
+	border-bottom:7px solid #0c234b;
 	background: rgba(30,30,30,0.9);
 	height: 50px;
 }
