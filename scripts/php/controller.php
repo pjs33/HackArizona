@@ -30,9 +30,9 @@
 
 	} else if( isset($_POST["support-issue"]) ) {
 		
-		$username = $_SESSION("username");
+		//$username = $_SESSION["username"];
 
-		
+	
 	}
 
 ?>
