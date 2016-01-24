@@ -14,8 +14,10 @@
 			session_start();
 			$_SESSION["username"] = $username;
 			header("location: http://localhost/HackArizona/");
+			exit();
 		} else {
 			header("location: http://localhost/HackArizona/login.php?failed");
+			exit();
 		}
 
 	} else if( isset($_POST["getPopularIssues"]) ) {
@@ -30,8 +32,6 @@
 
 	} else if( isset($_POST["signup"]) ) {
 
-		echo "hello";
-		/*
 		$username = $_POST["username"];
 		$realname = $_POST["realname"];
 		$email = $_POST["email"];
@@ -44,9 +44,11 @@
 
 		if( $addedNewUser ) {
 			header("location: http://localhost/HackArizona/login.php");
+			exit();
 		} else {
 			header("location: http://localhost/HackArizona/signup.php?failed");
-		}*/
+			exit();
+		}
 
 	
 	}
