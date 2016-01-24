@@ -276,7 +276,7 @@
           //changeBoolean = 1;
           changeShowAll();
           //resetPopular();
-          $("#popularIssuesContent").css("margin-top", "-35px");
+          $("#popularIssuesContent").css("margin-top", "-25px");
           $("#seeAllIssues").addClass("btn-primary");
           $("#nationalCaret").css("display", "");
           $("#popularIssues").css("border-top", "15px solid #0c234b");
