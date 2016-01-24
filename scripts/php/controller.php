@@ -2,7 +2,7 @@
 
 	require_once("DatabaseAdaptor.php");
 
-	$model = new DatabaseAdapter();
+	$model = new DatabaseConnection();
 
 	if( isset($_POST["login"]) ) {
 
@@ -10,10 +10,18 @@
 		$password = $_POST["password"];
 
 		if( $model->verifyLogin($username, $password) ) {
-			$_SESSION["username"] = $username;
-			header("localhost/");
+			echo "true";
 		} else {
-			header("localhost/HackArizona/login.php?failed");
+			header("location: http://localhost/HackArizona/login.php?failed");
+			echo "false";
+		}
+
+
+		if( $model->verifyLogin($username, $password) ) {
+			$_SESSION["username"] = $username;
+			header("location: http://localhost/");
+		} else {
+			header("location: http://localhost/HackArizona/login.php?failed");
 		}
 
 	} else if( isset($_POST["getPopularIssues"]) ) {

@@ -1,7 +1,7 @@
 <?php
 
 if( $_SESSION["username"] == "" ) {
-	header("localhost/HackArizona/login.php");
+	header("location: http://localhost/HackArizona/login.php");
 }
 
 ?>
