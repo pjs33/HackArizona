@@ -163,10 +163,10 @@ class DatabaseConnection {
 		$first  = -1;
 		$second = -1;
 		$third  = -1;
-		return $row[0]['issue_name'];
+		return $this->countDonations($row[0]['issue_id']);
 		/*
 		for ($i = 0; $i < count($row); $i++) {
-			$sum = $this->countVotes($row[$i]['issue_id']);
+			$sum = $this->countDonations($row[$i]['issue_id']);
 			
 			if ($sum > $thirdSum) {
 				$thirdSum = $sum;
