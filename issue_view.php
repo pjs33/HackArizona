@@ -1,3 +1,7 @@
+<?php 
+  session_start(); 
+?>
+
 <!DOCTYPE html>
 
 <?php
@@ -154,7 +158,8 @@
 
               <div><span id="remainingGoal">$<?php echo $remaining; ?></span><br>left to go.</div>
 
-              <?php if( isset($_SESSION["username"]) ) { ?>
+              <?php
+              if( isset($_SESSION["username"]) ) { ?>
                 <button id="start_donation" type="button" class="btn btn-success">Donate Towards This!</button>
               <?php } else { ?>
                 <a href="http://localhost/HackArizona/login.php"><button id="start_donation" type="button" class="btn btn-success">Login To Donate</button></a>
