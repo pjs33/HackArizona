@@ -13,38 +13,6 @@
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <script>
-    $(document).ready(function() {
-      var peopleDonating = Math.floor(Math.random() * 9999) + 1;
-      var moneyRaised = Math.floor(Math.random() * 9999) + 1;
-      var remainingGoal = Math.floor(Math.random() * 9999) + 1;
-
-      while (remainingGoal > moneyRaised) {
-        var remainingGoal = Math.floor(Math.random() * 9999) + 1;        
-      }
-
-      $("#peopleDonating").text(peopleDonating);
-      $("#moneyRaised").text("$"+ moneyRaised);
-      $("#remainingGoal").text("$"+ remainingGoal);
-
-      var total = moneyRaised+remainingGoal;
-      var difference = (moneyRaised / total)*100;
-      var temp = difference.toString();
-      if (difference > 10) {
-        var percentage = temp.substring(0, 2);
-      } else {
-        var percentage = temp.substring(0, 1);
-      }
-      
-
-      $("#donationsTotal").css("width", difference+"%");
-      $("#donationsTotal").text("Donations "+percentage+"% Complete.");
-
-    });
-    </script>
-
-
     
     <style>
     .carousel-inner > .item > img,

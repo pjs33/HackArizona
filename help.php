@@ -13,38 +13,6 @@
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <script>
-    $(document).ready(function() {
-      var peopleDonating = Math.floor(Math.random() * 9999) + 1;
-      var moneyRaised = Math.floor(Math.random() * 9999) + 1;
-      var remainingGoal = Math.floor(Math.random() * 9999) + 1;
-
-      while (remainingGoal > moneyRaised) {
-        var remainingGoal = Math.floor(Math.random() * 9999) + 1;        
-      }
-
-      $("#peopleDonating").text(peopleDonating);
-      $("#moneyRaised").text("$"+ moneyRaised);
-      $("#remainingGoal").text("$"+ remainingGoal);
-
-      var total = moneyRaised+remainingGoal;
-      var difference = (moneyRaised / total)*100;
-      var temp = difference.toString();
-      if (difference > 10) {
-        var percentage = temp.substring(0, 2);
-      } else {
-        var percentage = temp.substring(0, 1);
-      }
-      
-
-      $("#donationsTotal").css("width", difference+"%");
-      $("#donationsTotal").text("Donations "+percentage+"% Complete.");
-
-    });
-    </script>
-
-
     
     <style>
     .carousel-inner > .item > img,
@@ -58,7 +26,7 @@
       width: 960px;
       margin-left: auto;
       margin-right: auto;
-      height: 500px;
+      height: 445px;
       box-shadow: 0 0 10px #888888;
       border-radius: 0px 0px 10px 10px;
       background: white;
@@ -142,7 +110,7 @@
     ?>
 
     <div id="bodyContent">
-      <h1 id="issue-name">Help</h1>
+      <h1 id="issue-name">Experiencing Issues?</h1>
  
 
           <div class="textInfo">
@@ -162,7 +130,7 @@
               	 
               	 <h3>Who can I contact for assistance?</h3>
               	 
-              	 You can send us as an email at tech@na.com or call us at (520) 626-TECH for further assistance.
+              	 You can send us as an email at contact@thelobbyist or call us at 1(800) 626-TECH for further assistance.
               	 
               	 
               	 

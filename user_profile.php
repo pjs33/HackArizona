@@ -138,36 +138,22 @@
 
   </head>
   <body>
+    
     <?php
       require_once("view_components/navbar.php");
     ?>
 
     <div id="bodyContent">
-      <h1 id="issue-name">Personal Profile</h1>
-
-
-
-        
+      <h1 id="issue-name">User Profile</h1>
 
           <div class="textInfo">
             
-              <div id="text-para"> 
-                The Lobbyist is a dynamic and exciting new venture dedicated to giving you, 
-                as a citizen, a voice. Imagine if you could vote and choose topics relevant 
-                to your local or even state community. It doesn't stop there however, 
-                imagine if you could also choose and vote for country-wide reforms. The way Lobbyist works is simple:
-                through voting and crowdfunding, particular issues can be addressed through Lobbying. Through crowdfunding,
-                professional lobbyists can be hired to speak for you in Washington, rather than waiting for the political machine to address the issue
-                in question (which could take years). The Lobbyist is meant to switch the power of legislation back to the people
-                by reaffirming what is important to us as residents of the United States.
-                <br>
-                <br>
-                Getting started: go ahead and vote on issues! If there is something you are particularly intrigued by
-                or want to make an issue of they can also be submitted! Create an account to keep track of your submissions! Submit away!
-             </div>
+            <div id="text-para"> 
+                
+            </div>
              
-             <div id="picture">
-                <img src="https://lh5.ggpht.com/-y_80LZ2D6hbQrnhDyLjMYocM4ZDr0H06IFj5QPiof39wovHPASWp3oUnXMgZw0X5vo=w300" style="width:404px;height:390px;">
+            <div id="picture">
+              <img src="https://lh5.ggpht.com/-y_80LZ2D6hbQrnhDyLjMYocM4ZDr0H06IFj5QPiof39wovHPASWp3oUnXMgZw0X5vo=w300" style="width:404px;height:390px;">
              
              </div>
             <br>
