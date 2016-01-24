@@ -115,7 +115,7 @@
     <a class="nav-bar-link btn primary-btn" href="#">
       <?php if( isset($_SESSION["username"]) ) { ?>
         Logout
-      <?php } else { ?>
+      <?php } else { ?> 
         Login
       <?php } ?>
     </a>
