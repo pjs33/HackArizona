@@ -271,6 +271,14 @@
           ajaxGetPopularIssues("national");
         });
 
+        $("#stateIssues").click(function() {
+          ajaxGetPopularIssues("state");
+        });
+
+        $("#localIssues").click(function() {
+          ajaxGetPopularIssues("local");
+        });
+
         function ajaxGetPopularIssues(scope) {
           $.post("./scripts/php/controller.php",
           {
