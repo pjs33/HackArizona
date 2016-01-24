@@ -227,16 +227,16 @@ class DatabaseConnection {
 		$sql = "SELECT * FROM votes WHERE fk_issue_id = :fk_issue_id;";
 		$stmt = $this->DB->prepare( $sql );
 		$stmt->execute( array(':fk_issue_id' => $fk_issue_id) );
-		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+		$row = $stmt->fetchAll( PDO::FETCH_ASSOC );
 		
 		return count($row);
 	}
 	
 	public function votedFor($fk_username) {
-		$sql = "SELECT * FROM votes WHERE fk_username = :fk_username;";
+		$sql = "SELECT fk_issue_id FROM votes WHERE fk_username = :fk_username;";
 		$stmt = $this->DB->prepare( $sql );
 		$stmt->execute( array(':fk_username' => $fk_username) );
-		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+		$row = $stmt->fetchAll( PDO::FETCH_ASSOC );
 		
 		return $row;
 	}
