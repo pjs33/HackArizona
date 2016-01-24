@@ -123,8 +123,10 @@ session_start();
               
               <h2> Our Team </h2>
 
+			  God Empress Taylor "Tay Tay" Swift
+			  <br>
               <br>
-              Rubi Ballesteros
+              Rubi Ballesteros 
               <br>
               <br>
               Michael Lewelling
@@ -139,21 +141,19 @@ session_start();
               Daniel Situ
               <br>
               <br>
-	            Andre Takagi
+	           Andre Takagi
               <br>
               <br>	
               <br>
               <br>         
-
-	           </div>
+			</div>
 	           
-	           		<img id = "picture" src="http://localhost/img/HappyPicture.jpg" width = 480 height = 290 >
+	           <img id = "picture" src="http://localhost/img/HappyPicture.jpg" width = 480 height = 290 >
 	           
             <br>
           
             <iframe width="560" height="295" src="https://www.youtube.com/embed/e-ORhEE9VVg" frameborder="0" allowfullscreen></iframe>
-        
-        </div> <!--topInfo end-->
+
       </div> <!--bodyContent end-->
        <?php
       require_once("view_components/footbar.php");
