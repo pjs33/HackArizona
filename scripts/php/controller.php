@@ -18,15 +18,15 @@
 			header("location: http://localhost/HackArizona/login.php?failed");
 		}
 
-	} else if( isset($_POST["getPopularIssues"]) ) {
+	} else if( isset($_GET["getPopularIssues"]) ) {
 
-		$scope = $_POST["scope"];
+		//$scope = $_POST["scope"];
 
-		$popIssueArray = $model->getPopularIssues();
+		$popIssueArray = $model->getPopularIssues("national");
 
 		$jsonArray = json_encode($popIssueArray);
 
-		return $jsonArray;
+		echo $jsonArray;
 
 	}
 
