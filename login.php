@@ -47,8 +47,10 @@
 
     #h3_format {
       margin-top:0px;
+      text-align: center;
+      font-size: 15pt;
+      font-weight: 400;
     }
-
 
     #issue-name {
       margin: 0px;
