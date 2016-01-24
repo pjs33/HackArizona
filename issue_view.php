@@ -119,13 +119,24 @@
   </style>
 
   </head>
+
+<?php
+
+  require_once("scripts/php/DatabaseAdaptor.php");
+  $adapter = new DatabaseConnection();
+
+  $issue = $adapter->getIssue($_GET["i"]);
+
+
+?>
+
   <body>
     <?php
       require_once("view_components/navbar.php");
     ?>
 
     <div id="bodyContent">
-      <h2 id="issue-name">Issue Name</h2>
+      <h2 id="issue-name"><?php echo $issue['issue_name']; ?></h2>
 
         <div id="topInfo">
 
