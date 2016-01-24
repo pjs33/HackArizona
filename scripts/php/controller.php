@@ -2,17 +2,30 @@
 
 	require_once("DatabaseAdapter.php");
 
-	if( $_POST["login"] ) {
+	$model = new DatabaseAdapter();
+
+	if( isset($_POST["login"]) ) {
+
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 
-		if( verifyLogin($username, $password) ) {
+		if( $model->verifyLogin($username, $password) ) {
 			$_SESSION["username"] = $username;
+			header("localhost/")
 		} else {
-			header("localhost/login.php?failed");
+			header("localhost/HackArizona/login.php?failed");
 		}
-	} else if() {
-		
+
+	} else if( isset($_POST["getPopularIssues"]) ) {
+
+		$scope = $_POST["scope"];
+
+		$popIssueArray = $model->getPopularIssues();
+
+		$jsonArray = json_encode($popIssueArray);
+
+		return $jsonArray;
+
 	}
 
 ?>
