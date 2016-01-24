@@ -163,8 +163,7 @@ class DatabaseConnection {
 		$first  = -1;
 		$second = -1;
 		$third  = -1;
-		return $this->countDonations($row[0]['issue_id']);
-		/*
+		
 		for ($i = 0; $i < count($row); $i++) {
 			$sum = $this->countDonations($row[$i]['issue_id']);
 			
@@ -205,7 +204,6 @@ class DatabaseConnection {
 		$issues = array_merge($issues, $this->getIssue($third));
 		
 		return $issues;
-		*/
 	}
 	
 	/*********************************************************************************************
@@ -260,7 +258,7 @@ class DatabaseConnection {
 		$sql = "SELECT * FROM donations WHERE fk_issue_id = :fk_issue_id;";
 		$stmt = $this->DB->prepare( $sql );
 		$stmt->execute( array(':fk_issue_id' => $fk_issue_id) );
-		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+		$row = $stmt->fetchAll( PDO::FETCH_ASSOC );
 	
 		$sum = 0;
 		for ($i = 0; $i < count($row); $i++) {
