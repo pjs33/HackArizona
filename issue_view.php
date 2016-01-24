@@ -142,9 +142,9 @@
             </div>
             <div id="donationContainer">
               <div><span id="peopleDonating"><?php echo $adapter->countDonators($_GET["i"]); ?></span><br>people have donated towards this project.</div>
-              <div><span id="moneyRaised"><?php echo $adapter->countDonations($_GET["i"]); ?></span><br>has been raised.</div>
+              <div><span id="moneyRaised">$<?php echo $adapter->countDonations($_GET["i"]); ?></span><br>has been raised.</div>
 
-              <div><span id="remainingGoal"><?php echo $remaining; ?></span><br>left to go.</div>
+              <div><span id="remainingGoal">$<?php echo $remaining; ?></span><br>left to go.</div>
 
               <button id="start_donation" type="button" class="btn btn-success">Donate Towards This!</button>
               <img id="facebookButton" src="./css/images/share_on_facebook.png">

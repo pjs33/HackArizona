@@ -217,15 +217,15 @@
         
         <div class="row">
           <div id="localIssues" class="col-sm-4">
-      	    <a type="button" class="btn btn-danger btn-block">Local</a>
+      	    <a type="button" style="font-size: 14pt;" class="btn btn-primary btn-block">Local</a>
             <span id="localCaret" style="color: #d9534f; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
           </div>
           <div id="stateIssues" class="col-sm-4">
-             <a type="button" class="btn btn-default btn-block">State</a>		
+             <a type="button" style="font-size: 14pt;" class="btn btn-primary btn-block">State</a>		
              <span id="stateCaret" style="color: black; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
           </div>
           <div id="nationalIssues" class="col-sm-4">
-            <a type="button" class="btn btn-primary btn-block">National</a>
+            <a type="button" style="font-size: 14pt;" class="btn btn-primary btn-block">National</a>
             <span id="nationalCaret" style="color: #337ab7; font-size: 20pt; display: none;" class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
           </div>
         </div>
@@ -269,14 +269,35 @@
 
         $("#nationalIssues").click(function() {
           ajaxGetPopularIssues("national");
+          //changeBoolean = 1;
+          changeShowAll();
+          //resetPopular();
+          $("#popularIssuesContent").css("margin-top", "-25px");
+          $("#seeAllIssues").addClass("btn-primary");
+          $("#nationalCaret").css("display", "");
+          $(".issue").css("border", "3px solid #337ab7");
         });
 
         $("#stateIssues").click(function() {
           ajaxGetPopularIssues("state");
+          //changeBoolean = 1;
+          changeShowAll();
+          //resetPopular();
+          $("#popularIssuesContent").css("margin-top", "-25px");
+          $("#seeAllIssues").addClass("btn-success");
+          $("#stateCaret").css("display", "");
+          $(".issue").css("border", "3px solid black");
         });
 
         $("#localIssues").click(function() {
           ajaxGetPopularIssues("local");
+          //changeBoolean = 1;
+          changeShowAll();
+          //resetPopular();
+          $("#popularIssuesContent").css("margin-top", "-25px");
+          $("#seeAllIssues").addClass("btn-danger");
+          $("#localCaret").css("display", "");
+          $(".issue").css("border", "3px solid #d9534f");
         });
 
         function ajaxGetPopularIssues(scope) {
@@ -301,92 +322,23 @@
             }
           });
         }
+
+
+        function changeShowAll() {
+          $("#localCaret").css("display", "none");
+          $("#stateCaret").css("display", "none");
+          $("#nationalCaret").css("display", "none");
+          $("#seeAllIssues").removeClass("btn-success");
+          $("#seeAllIssues").removeClass("btn-info");
+          $("#seeAllIssues").removeClass("btn-primary");
+          $("#seeAllIssues").removeClass("btn-danger");
+        }
       });
 
         
 
-        /*
-        var changeBoolean = 0;
-
-        var randomIssues = ["TayTay Today","LETS BUILD A WALL","Support Local PlayGround","Local Pothole", 'Dog "Lost"',"Pet shark on the loose", "President Obama...", "Stick In Road", "Mountain Currently Exploding..."];
-        var randomURLforIssues = ["./css/images/01.jpg","./css/images/02.jpg","./css/images/05.jpg","./css/images/06.jpg", "./css/images/07.jpg", "./css/images/08.jpg", "./css/images/09.jpg","./css/images/10.jpg","./css/images/11.jpg"];
-
-        function resetPopular() {
-
-          var arrLength = randomIssues.length;
-          var random1 = Math.floor(Math.random() * arrLength);
-          var random2 = Math.floor(Math.random() * arrLength);  
-          while (random2 == random1) {
-            random2 = Math.floor(Math.random() * arrLength);  
-          }
-          var random3 = Math.floor(Math.random() * arrLength);   
-          while (random3 == random2 || random3 == random1) {
-            random3 = Math.floor(Math.random() * arrLength);  
-          }
-
-          $("#issueTitle1").text(randomIssues[random1]);
-          $("#imgThumb1").attr("src", randomURLforIssues[random1]);
-          $("#issueTitle2").text(randomIssues[random2]);
-          $("#imgThumb2").attr("src", randomURLforIssues[random2]);
-          $("#issueTitle3").text(randomIssues[random3]);
-          $("#imgThumb3").attr("src", randomURLforIssues[random3]);
-
-        }
-        resetPopular();
-
-        setInterval(function() {
-            if (changeBoolean == 0) {
-              resetPopular();
-            }
-        },10000);
-
-
-        $("#stateIssues").click(function() {
-          changeBoolean = 1;
-          changeShowAll();
-          resetPopular();
-          $("#popularIssuesContent").css("margin-top", "-25px");
-          $("#seeAllIssues").addClass("btn-success");
-          $("#stateCaret").css("display", "");
-          $(".issue").css("border", "3px solid black");
-
-
-        });
-
-        $("#nationalIssues").click(function() {
-          changeBoolean = 1;
-          changeShowAll();
-          resetPopular();
-          $("#popularIssuesContent").css("margin-top", "-25px");
-          $("#seeAllIssues").addClass("btn-primary");
-          $("#nationalCaret").css("display", "");
-          $(".issue").css("border", "3px solid #337ab7");
-        });
-
-        $("#localIssues").click(function() {
-          changeBoolean = 1;
-          changeShowAll();
-          resetPopular();
-          $("#popularIssuesContent").css("margin-top", "-25px");
-          $("#seeAllIssues").addClass("btn-danger");
-          $("#localCaret").css("display", "");
-          $(".issue").css("border", "3px solid #d9534f");
-        });
-
-      });
-
-
-
-
-      function changeShowAll() {
-        $("#localCaret").css("display", "none");
-        $("#stateCaret").css("display", "none");
-        $("#nationalCaret").css("display", "none");
-        $("#seeAllIssues").removeClass("btn-success");
-        $("#seeAllIssues").removeClass("btn-info");
-        $("#seeAllIssues").removeClass("btn-primary");
-        $("#seeAllIssues").removeClass("btn-danger");
-      }*/
+        
+        
 
     </script>
 
