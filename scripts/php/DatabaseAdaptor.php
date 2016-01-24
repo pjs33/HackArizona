@@ -169,12 +169,7 @@ class DatabaseConnection {
 			
 			if ($sum > $thirdSum) {
 				$thirdSum = $sum;
-				$third = $i;
-			}
-			
-			if ($sum > $thirdSum) {
-				$thirdSum = $sum;
-				$third = $i;
+				$third = $row[$i]['issue_id'];
 			}
 			
 			if ($sum > $secondSum) {
@@ -182,7 +177,7 @@ class DatabaseConnection {
 				$third = $second;
 				
 				$secondSum = $sum;
-				$second = $i;
+				$second = $row[$i]['issue_id'];
 			}
 			
 			if ($sum > $firstSum) {
@@ -193,7 +188,7 @@ class DatabaseConnection {
 				$second = $first;
 				
 				$firstSum = $sum;
-				$first = $i;
+				$first = $row[$i]['issue_id'];
 			}
 		}
 		
