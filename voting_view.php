@@ -3,7 +3,7 @@
 ?>
 
 <?php 
-
+  /*
   require_once("/scripts/php/DatabaseAdaptor.php");
   $model = new DatabaseConnection();
 
@@ -14,6 +14,8 @@
   $title = $issueAttributes["issue_name"];
   $numVotes = $model->countVotes($issue_id);
   $scope =  $issueAttributes["issue_scope"];
+  
+
 
   if($scope == "local") {
     $goalVotes = 1000;
@@ -22,7 +24,7 @@
   } else if($scope == "national") {
     $goalVotes = 100000;
   }
-
+  
   $votesNeeded = $goalVotes - $numVotes;
 
   $username = $_SESSION["username"];
@@ -34,7 +36,11 @@
       $votedForIssue = true;
     }
   }
+  */
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -141,17 +147,15 @@
             </div>
             <div id="donationContainer">
 
-              <div><span id="currentVoters"><?php echo $numVotes; ?></span><br> people want this to be an issue.</div>
+              <div><span id="currentVoters"></span><br> people want this to be an issue.</div>
 
-              <div><span id="totalNeeded"><?php echo $votesNeeded; ?></span><br> people needed to delare this issue.<br><?php echo $goalVotes; ?> total votes needed.</div>
-              <?php if( !$votedForIssue ) { ?>
+              <div><span id="totalNeeded"></span><br> people needed to delare this issue.<br><br>10000 total votes needed.</div>
+              
               <form action="/HackArizona/scripts/php/controller.php" method="post">
                 <button id="start_donation" type="submit" name="support-issue" class="btn btn-success">Support This Issue!</button>
               </form>
-              <?php } ?>
               <img id="facebookButton" src="./css/images/share_on_facebook.png">
               <img id="twitterButton" src="./css/images/share_on_twitter.png">
-
 
             </div>
           </div>
