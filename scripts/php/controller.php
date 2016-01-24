@@ -9,17 +9,10 @@
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 
-		if( $model->verifyLogin($username, $password) ) {
-			echo "true";
-		} else {
-			header("location: http://localhost/HackArizona/login.php?failed");
-			echo "false";
-		}
-
 
 		if( $model->verifyLogin($username, $password) ) {
 			$_SESSION["username"] = $username;
-			header("location: http://localhost/");
+			header("location: http://localhost/HackArizona/");
 		} else {
 			header("location: http://localhost/HackArizona/login.php?failed");
 		}
