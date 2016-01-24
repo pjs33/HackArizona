@@ -8,6 +8,7 @@
   $issue = $adapter->getIssue($_GET["i"]);
 
   $goal = $issue['goal_amount'];
+  $picUrl = $issue['picture'];
   $raised = $adapter->countDonations($_GET["i"]);
   $remaining = $goal - $raised;
 
@@ -43,7 +44,7 @@
       
 
       $("#donationsTotal").css("width", difference+"%");
-      $("#donationsTotal").text("Donations "+percentage+"% Complete.");
+      $("#donationsText").text("Donations "+percentage+"% Complete.");
 
     });
     </script>
@@ -102,6 +103,7 @@
     #textInfo {
       margin-top: 15px;
     }
+
     #peopleDonating, #moneyRaised, #remainingGoal {
       font-size: 30pt;
       color: #5cb85c;
@@ -109,6 +111,7 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     #start_donation {
       margin: 30px 50px 20px 50px;
       width: 250px;
@@ -121,6 +124,11 @@
       margin-left: 10px;
     }
 
+    #donationsText {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
 
   </style>
 
@@ -138,7 +146,7 @@
 
           <div id="mainInfo">
             <div id="pictureContainer">
-              <img id="image_main" src="./css/images/default-user.png">
+              <img id="image_main" src="<?php echo $picUrl ?>">
             </div>
             <div id="donationContainer">
               <div><span id="peopleDonating"><?php echo $adapter->countDonators($_GET["i"]); ?></span><br>people have donated towards this project.</div>
@@ -152,8 +160,8 @@
 
             </div>
           </div>
-
-          <div class="progress" style="margin-top: 20px;">
+          <div id="donationsText"></div>
+          <div class="progress">
             <div id="donationsTotal" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70"
             aria-valuemin="0" aria-valuemax="100">
             </div>
