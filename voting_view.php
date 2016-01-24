@@ -1,47 +1,3 @@
-<?php 
-  require_once("/scripts/php/session_management.php");
-?>
-
-<?php 
-  /*
-  require_once("/scripts/php/DatabaseAdaptor.php");
-  $model = new DatabaseConnection();
-
-  $issue_id = $_GET["i"];
-
-  $issueAttributes = $model->getIssue($issue_id);
-
-  $title = $issueAttributes["issue_name"];
-  $numVotes = $model->countVotes($issue_id);
-  $scope =  $issueAttributes["issue_scope"];
-  
-
-
-  if($scope == "local") {
-    $goalVotes = 1000;
-  } else if($scope == "state") {
-    $goalVotes = 10000;
-  } else if($scope == "national") {
-    $goalVotes = 100000;
-  }
-  
-  $votesNeeded = $goalVotes - $numVotes;
-
-  $username = $_SESSION["username"];
-  $votedOnIssuesArray = $model->votedFor($username);
-
-  $votedForIssue = false;
-  for($i = 0; $i < count($votedOnIssuesArray); $i++) {
-    if($votedOnIssuesArray[$i] == $issue_id) {
-      $votedForIssue = true;
-    }
-  }
-  */
-?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -137,7 +93,7 @@
     ?>
 
     <div id="bodyContent">
-      <h2 id="issue-name"><?php echo $title; ?></h2>
+      <h2 id="issue-name">Test Title for Voting!</h2>
 
         <div id="topInfo">
 
@@ -147,11 +103,11 @@
             </div>
             <div id="donationContainer">
 
-              <div><span id="currentVoters"></span><br> people want this to be an issue.</div>
+              <div><span id="currentVoters">9587</span><br> people want this to be an issue.</div>
 
-              <div><span id="totalNeeded"></span><br> people needed to delare this issue.<br><br>10000 total votes needed.</div>
+              <div><span id="totalNeeded">2487</span><br> people needed to delare this issue.<br><br>20000 total votes needed.</div>
               
-              <form action="/HackArizona/scripts/php/controller.php" method="post">
+              <form method="post">
                 <button id="start_donation" type="submit" name="support-issue" class="btn btn-success">Support This Issue!</button>
               </form>
               <img id="facebookButton" src="./css/images/share_on_facebook.png">

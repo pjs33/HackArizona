@@ -140,7 +140,7 @@
             <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
                 <h3 class="panel-title">Issue #1</h3>
             </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+            <div class="panel-body">Test page for issues to vote on.<a href="http://localhost/HackArizona/voting_view.php"><button style="float: right;">Get info!</button></a></div>
 
         </div>
 
@@ -148,14 +148,14 @@
             <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
                 <h3 class="panel-title">Issue #2</h3>
             </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+            <div class="panel-body">Test page for issues to vote on.<a href="http://localhost/HackArizona/voting_view.php"><button style="float: right;">Get info!</button></a></div>
         </div>
 
         <div class="panel panel-primary">
             <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
                 <h3 class="panel-title">Issue #3</h3>
             </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+            <div class="panel-body">Test page for issues to vote on.<a href="http://localhost/HackArizona/voting_view.php"><button style="float: right;">Get info!</button></a></div>
         </div>
 
       </div>
