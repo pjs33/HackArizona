@@ -39,11 +39,12 @@
       background: #f2f2f2;
     }
 
-    #box{
+    #box {
       width:450px;
       margin:5px auto 20px auto;
       padding:10px 0px 10px 0px;
     }
+
 
     #issue-name {
       margin: 0px;
@@ -101,6 +102,7 @@
 
     <div id="bodyContent">
       <div id="box" class="well">
+        <h3 id="h3_format"> Login </h3>
         <form action="" method="post">
           Username:<br>
           <input type="text" name="username"><br>

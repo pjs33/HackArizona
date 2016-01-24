@@ -43,8 +43,12 @@
       width:450px;
       margin:5px auto 20px auto;
       padding:20px;
-      padding-top:50px;
     }
+
+    #h3_format {
+      margin-top:0px;
+    }
+
 
     #issue-name {
       margin: 0px;
@@ -102,7 +106,8 @@
 
     <div id="bodyContent">
       <div id="box" class="well">
-        <form action="/sHackArizona/scripts/php/controller.php" method="post">
+        <h3 id="h3_format"> Login </h3>
+        <form action="/HackArizona/scripts/php/controller.php" method="post">
           <input type="text" name="username" placeholder="Username"><br><br>
           <input type="password" name="password" placeholder="Password"><br>
           <br>
