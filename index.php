@@ -1,7 +1,3 @@
-<?php 
-  require_once("/scripts/php/session_management.php");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
