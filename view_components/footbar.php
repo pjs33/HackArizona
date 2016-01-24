@@ -4,7 +4,6 @@
 
 	background: rgba(30,30,30,0.9);
 	height: 50px;
-	
 }
 .footer-header{
 	width:50%;

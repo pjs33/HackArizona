@@ -85,6 +85,11 @@
             .jssorb01 .av:hover     (active mouseover)
             .jssorb01 .dn           (mousedown)
             */
+            body{
+              margin-bottom: 0px;
+            }
+
+
             .jssorb01 {
                 position: absolute;
             }
@@ -374,13 +379,9 @@
 
     </script>
 
-	
 <?php
       require_once("view_components/footbar.php");
     ?>
-
-
-
 
   </body>
 </html>
