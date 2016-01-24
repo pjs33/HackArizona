@@ -136,7 +136,7 @@ class DatabaseConnection {
 		$sql = "SELECT * FROM issues WHERE issue_id = :issue_id;";
 		$stmt = $this->DB->prepare( $sql );
 		$stmt->execute( array(':issue_id' => $issue_id) );
-		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+		$row = $stmt->fetchAll( PDO::FETCH_ASSOC );
 	
 		return $row;
 	}
@@ -153,7 +153,7 @@ class DatabaseConnection {
 	public function getPopularIssues($issue_scope) {
 		$sql = "SELECT * FROM issues WHERE issue_scope = :issue_scope;";
 		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':issue_scope' => issue_scope) );
+		$stmt->execute( array(':issue_scope' => $issue_scope) );
 		$row = $stmt->fetchAll( PDO::FETCH_ASSOC );
 	
 		$firstSum  = -1;
