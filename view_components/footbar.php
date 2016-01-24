@@ -37,7 +37,7 @@ padding-left: 25px;
 	 			<div class="footertitle">
 	 				<h2>Discover</h2>
 	 			</div>
-			 		<a class="nav-bar-link btn primary-btn" href="http://localhost/contact_us.php">Help</a>
+			 		<a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/help.php">Help</a>
 			 		<a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/contact_us.php">Contact us</a>
 			 		<a class="nav-bar-link btn primary-btn" href="http://google.com">Careers</a>
 			 				
