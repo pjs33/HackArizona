@@ -113,7 +113,7 @@
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
     <?php if( isset($_SESSION["username"]) ) { ?>
-      <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/logout.php">
+      <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/scripts/php/session_logout.php">
         Logout
       </a>
     <?php } else { ?> 

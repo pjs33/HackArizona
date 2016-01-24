@@ -28,9 +28,25 @@
 
 		echo $jsonArray;
 
-	} else if( isset($_POST["support-issue"]) ) {
-		
-		//$username = $_SESSION["username"];
+	} else if( isset($_POST["signup"]) ) {
+
+		echo "hello";
+		/*
+		$username = $_POST["username"];
+		$realname = $_POST["realname"];
+		$email = $_POST["email"];
+		$address = $_POST["address"];
+		$city = $_POST["city"];
+		$state = $_POST["state"];
+		$zipcode = $_POST["zipcode"];
+		$password = $_POST["password"];
+		$addedNewUser = $model->register($username, $realname, $email, $address, $city, $state, $zipcode, $password);
+
+		if( $addedNewUser ) {
+			header("location: http://localhost/HackArizona/login.php");
+		} else {
+			header("location: http://localhost/HackArizona/signup.php?failed");
+		}*/
 
 	
 	}
