@@ -193,10 +193,13 @@ class DatabaseConnection {
 		}
 		
 		$issues = array();
+		$issues[0] = array();
+		$issues[1] = array();
+		$issues[2] = array();
 		
-		$issues = array_push($issues, $this->getIssue($first));
-		$issues = array_push($issues, $this->getIssue($second));
-		$issues = array_push($issues, $this->getIssue($third));
+		$issues[0] = $this->getIssue($first);
+		$issues[1] = $this->getIssue($second);
+		$issues[2] = $this->getIssue($third);
 		
 		return $issues;
 	}
