@@ -1,3 +1,37 @@
+<?php 
+
+  require_once("/scripts/php/DatabaseAdaptor.php");
+  $model = new DatabaseConnection();
+
+  $issue_id = $_GET["i"];
+
+  $issueAttributes = $model->getIssue($issue_id);
+
+  $title = $issueAttributes["issue_name"];
+  $numVotes = $model->countVotes($issue_id);
+  $scope =  $issueAttributes["issue_scope"];
+
+  if($scope == "local") {
+    $goalVotes = 1000;
+  } else if($scope == "state") {
+    $goalVotes = 10000;
+  } else if($scope == "national") {
+    $goalVotes = 100000;
+  }
+
+  $votesNeeded = $goalVotes - $numVotes;
+
+  $username = $_SESSION["username"];
+  $votedOnIssuesArray = $model->votedFor($username);
+
+  $votedForIssue = false;
+  for($i = 0; $i < count($votedOnIssuesArray); $i++) {
+    if($votedOnIssuesArray[$i] == $issue_id) {
+      $votedForIssue = true;
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,18 +47,6 @@
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <script>
-    $(document).ready(function() {
-      var peopleSupporting = Math.floor(Math.random() * 10000) + 1;
-
-      $("#currentVoters").text(peopleSupporting);
-      $("#totalNeeded").text(10000 - peopleSupporting);
-
-    });
-    </script>
-
-
     
     <style>
     .carousel-inner > .item > img,
@@ -105,7 +127,7 @@
     ?>
 
     <div id="bodyContent">
-      <h2 id="issue-name">Issue Name</h2>
+      <h2 id="issue-name"><?php echo $title; ?></h2>
 
         <div id="topInfo">
 
@@ -115,13 +137,17 @@
             </div>
             <div id="donationContainer">
 
-              <div><span id="currentVoters"></span><br> people want this to be an issue.</div>
+              <div><span id="currentVoters"><?php echo $numVotes; ?></span><br> people want this to be an issue.</div>
 
-              <div><span id="totalNeeded"></span><br> people needed to delare this issue.<br>10,000 total votes needed.</div>
-
-              <button id="start_donation" type="button" class="btn btn-success">Support This Issue!</button>
+              <div><span id="totalNeeded"><?php echo $votesNeeded; ?></span><br> people needed to delare this issue.<br><?php echo $goalVotes; ?> total votes needed.</div>
+              <?php if( !$votedForIssue ) { ?>
+              <form action="/HackArizona/scripts/php/controller.php" method="post">
+                <button id="start_donation" type="submit" name="support-issue" class="btn btn-success">Support This Issue!</button>
+              </form>
+              <?php } ?>
               <img id="facebookButton" src="./css/images/share_on_facebook.png">
               <img id="twitterButton" src="./css/images/share_on_twitter.png">
+
 
             </div>
           </div>

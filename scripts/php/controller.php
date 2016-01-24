@@ -28,6 +28,11 @@
 
 		echo $jsonArray;
 
+	} else if( isset($_POST["support-issue"]) ) {
+		
+		$username = $_SESSION("username");
+
+		
 	}
 
 ?>
