@@ -256,7 +256,7 @@
           </a>
         </div>
 
-        <a id="seeAllIssues" href="#" type="button" class="btn btn-info btn-block"><span class="glyphicon glyphicon-edit"></span>See All Issues</a>
+        <a id="seeAllIssues" href="#" type="button" class="btn btn-info btn-block">See All Issues</a>
 
       </div>
 
