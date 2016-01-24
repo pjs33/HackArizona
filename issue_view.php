@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+
+<?php
+
+  require_once("scripts/php/DatabaseAdaptor.php");
+  $adapter = new DatabaseConnection();
+
+  $issue = $adapter->getIssue($_GET["i"]);
+
+  $goal = $issue['goal_amount'];
+  $raised = $adapter->countDonations($_GET["i"]);
+  $remaining = $goal - $raised;
+
+?>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -16,19 +30,9 @@
 
     <script>
     $(document).ready(function() {
-      var peopleDonating = Math.floor(Math.random() * 9999) + 1;
-      var moneyRaised = Math.floor(Math.random() * 9999) + 1;
-      var remainingGoal = Math.floor(Math.random() * 9999) + 1;
-
-      while (remainingGoal > moneyRaised) {
-        var remainingGoal = Math.floor(Math.random() * 9999) + 1;        
-      }
-
-      $("#peopleDonating").text(peopleDonating);
-      $("#moneyRaised").text("$"+ moneyRaised);
-      $("#remainingGoal").text("$"+ remainingGoal);
-
-      var total = moneyRaised+remainingGoal;
+      
+      var moneyRaised = <?php echo $raised; ?>;
+      var total = <?php echo $goal; ?>;
       var difference = (moneyRaised / total)*100;
       var temp = difference.toString();
       if (difference > 10) {
@@ -77,7 +81,9 @@
 
     #topInfo, .progress {
       width: 900px;
+      margin:auto;
     }
+
     #mainInfo {
       overflow: auto;
       font-size: 16pt;
@@ -120,16 +126,6 @@
 
   </head>
 
-<?php
-
-  require_once("scripts/php/DatabaseAdaptor.php");
-  $adapter = new DatabaseConnection();
-
-  $issue = $adapter->getIssue($_GET["i"]);
-
-
-?>
-
   <body>
     <?php
       require_once("view_components/navbar.php");
@@ -145,10 +141,10 @@
               <img id="image_main" src="./css/images/default-user.png">
             </div>
             <div id="donationContainer">
-              <div><span id="peopleDonating"></span><br>people have donated towards this project.</div>
-              <div><span id="moneyRaised"></span><br>has been raised.</div>
+              <div><span id="peopleDonating"><?php echo $adapter->countDonators($_GET["i"]); ?></span><br>people have donated towards this project.</div>
+              <div><span id="moneyRaised"><?php echo $adapter->countDonations($_GET["i"]); ?></span><br>has been raised.</div>
 
-              <div><span id="remainingGoal"></span><br>left to go.</div>
+              <div><span id="remainingGoal"><?php echo $remaining; ?></span><br>left to go.</div>
 
               <button id="start_donation" type="button" class="btn btn-success">Donate Towards This!</button>
               <img id="facebookButton" src="./css/images/share_on_facebook.png">
