@@ -136,7 +136,7 @@ class DatabaseConnection {
 		$sql = "SELECT * FROM issues WHERE issue_id = :issue_id;";
 		$stmt = $this->DB->prepare( $sql );
 		$stmt->execute( array(':issue_id' => $issue_id) );
-		$row = $stmt->fetchAll( PDO::FETCH_ASSOC );
+		$row = $stmt->fetch( PDO::FETCH_ASSOC );
 	
 		return $row;
 	}
