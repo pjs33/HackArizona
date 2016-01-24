@@ -124,6 +124,11 @@
           <input type="text" name="zipcode" placeholder="Zipcode"><br>
 
           <input type="password" name="password" placeholder="Password"><br>
+
+           <?php if( isset($_GET["failed"]) ) { ?>
+            <p style="color:red;margin-top:10px;margin-bottom:0px;">Username is already taken</p>
+          <?php } ?>
+
           <input type="submit" value="Submit" name="signup">
         </form>
       </div>
