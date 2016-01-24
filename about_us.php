@@ -128,6 +128,7 @@
    #picture{
    		width:50%;
    		float:right;
+   		padding-top: 50px;
    		
    }
 
@@ -141,36 +142,50 @@
     ?>
 
     <div id="bodyContent">
-      <h1 id="issue-name">How It Works</h1>
-
-
-
-        
+      <h1 id="issue-name">About Us</h1>
+ 
 
           <div class="textInfo">
             
               <div id="text-para"> 
-	              The Lobbyist is a dynamic and exciting new venture dedicated to giving you, 
-	              as a citizen, a voice. Imagine if you could vote and choose topics relevant 
-	              to your local or even state community. It doesn't stop there however, 
-	              imagine if you could also choose and vote for country-wide reforms. The way Lobbyist works is simple:
-	              through voting and crowdfunding, particular issues can be addressed through Lobbying. Through crowdfunding,
-	              professional lobbyists can be hired to speak for you in Washington, rather than waiting for the political machine to address the issue
-	              in question (which could take years). The Lobbyist is meant to switch the power of legislation back to the people
-	              by reaffirming what is important to us as residents of the United States.
+              
+              <h2>Meet the team</h2>
+              		
+              	  <br>
+              	  CEO/CFO: Tay Tay
+              	  <br>
+              	  <br>
+	              Tokage Eternal Kawaiiiiii Sunshine
 	              <br>
 	              <br>
-	              Getting started: go ahead and vote on issues! If there is something you are particularly intrigued by
-	              or want to make an issue of they can also be submitted! Create an account to keep track of your submissions! Submit away!
+	              Daniel Situ
+	               <br>
+	               <br>
+	              Peter "Peeta" Sequieros
+	               <br>
+	               <br>
+	              Michael "the Italian Stallion" Lewelling
+	               <br>
+	               <br>
+	              Rubi "Michel's Wifu" Ballesteros
+	               <br>
+	               <br>
+	              Michel Sanchez
+	               <br>
+	               <br>
+	              Fabian de la Pena Montero Garcia 
+	               
 	           </div>
 	           
 	           <div id="picture">
-	           		<img src="https://lh5.ggpht.com/-y_80LZ2D6hbQrnhDyLjMYocM4ZDr0H06IFj5QPiof39wovHPASWp3oUnXMgZw0X5vo=w300" style="width:404px;height:390px;">
+	           		<img src="http://www.animeinferno.com.au/wp-content/uploads/2015/10/aot2.jpg" style="width:404px;height:350px;">
 	           
 	           </div>
             <br>
             
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/aTbtKRdYbYo" frameborder="0" allowfullscreen></iframe>
+   
+            
+            <iframe width="560" height="295" src="https://www.youtube.com/embed/e-ORhEE9VVg" frameborder="0" allowfullscreen></iframe>
         
         </div> <!--topInfo end-->
       </div> <!--bodyContent end-->
