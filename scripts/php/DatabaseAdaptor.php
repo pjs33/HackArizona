@@ -194,9 +194,9 @@ class DatabaseConnection {
 		
 		$issues = array();
 		
-		$issues = array_merge($issues, $this->getIssue($first));
-		$issues = array_merge($issues, $this->getIssue($second));
-		$issues = array_merge($issues, $this->getIssue($third));
+		$issues = array_push($issues, $this->getIssue($first));
+		$issues = array_push($issues, $this->getIssue($second));
+		$issues = array_push($issues, $this->getIssue($third));
 		
 		return $issues;
 	}
