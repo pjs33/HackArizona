@@ -1,6 +1,6 @@
 <?php
 
-	require_once("DatabaseAdapter.php");
+	require_once("DatabaseAdaptor.php");
 
 	$model = new DatabaseAdapter();
 
@@ -11,7 +11,7 @@
 
 		if( $model->verifyLogin($username, $password) ) {
 			$_SESSION["username"] = $username;
-			header("localhost/")
+			header("localhost/");
 		} else {
 			header("localhost/HackArizona/login.php?failed");
 		}
