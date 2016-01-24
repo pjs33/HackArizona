@@ -1,30 +1,26 @@
 <style>
 
-#container{
+#container {
 	border-bottom:5px solid #0c234b;
 	background: rgba(30,30,30,0.9);
 	height: 50px;
 }
-.footer-header{
-	width:50%;
 
-}
-.footer-header a{
-	float:right;
-	padding:10px;
-}
-.footer-header h2{
+.footer-header {
+	width:960px;
 	margin:auto;
-	float:left;
-	font-color: red;
-	padding-bottom:10px;
+	text-align: center;
+	padding-top:2px;
 }
-.footertitle{
-color: white;
-padding-left: 25px;
+
+.footer-header a {
+	padding:10px;
+	font-size: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
 
 
-}
 
 /*footbar start*/
 
@@ -33,14 +29,9 @@ padding-left: 25px;
 	<div id="container">
 		
 	       <div class="footer-header">
-	 			<div class="footertitle">
-	 				<h2>Discover</h2>
-	 			</div>
 			 		<a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/help.php">Help</a>
-			 		<a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/contact_us.php">Contact us</a>
 			 		<a class="nav-bar-link btn primary-btn" href="http://google.com">Careers</a>
-			 				
-	 		
-		</div>
+			 		<a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/contact_us.php">Contact Us</a>	
+			</div>
 	
 	</div>
