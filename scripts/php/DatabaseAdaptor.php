@@ -132,13 +132,22 @@ class DatabaseConnection {
 		$stmt->execute( array(':issue_name' => $issue_name, ':issue_scope' => $issue_scope, ':issue_start_date' => $startdate, ':issue_end_date' => $enddate, ':goal_amount' => $goal_amount, ':current_amount' => 0, ':num_donors' => 0, ':picture' => $picture, ':fk_lobbyist_username' => $fk_lobbyist_username) );
 	}
 	
-	public function getIssue($issueid) {
-		$sql = "SELECT * FROM issues WHERE issueid = :issueid;";
+	public function getIssue($issue_id) {
+		$sql = "SELECT * FROM issues WHERE issue_id = :issue_id;";
 		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':issueid' => $issueid) );
+		$stmt->execute( array(':issue_id' => $issue_id) );
 		$row = $stmt->fetch( PDO::FETCH_ASSOC );
 	
-		$return $row;
+		return $row;
+	}
+	
+	public function getAllIssues($issue_scope) {
+		$sql = "SELECT * FROM issues WHERE issue_scope = :issue_scope;";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':issue_scope' => issue_scope) );
+		$row = $stmt->fetch( PDO::FETCH_ASSOC );
+	
+		return $row;
 	}
 	
 	/*********************************************************************************************
@@ -162,7 +171,7 @@ class DatabaseConnection {
 		$stmt->execute( array(':fk_issue_id' => $fk_issue_id) );
 		$row = $stmt->fetch( PDO::FETCH_ASSOC );
 		
-		$return count($row);
+		return count($row);
 	}
 	
 	public function votedFor($fk_username) {
@@ -171,7 +180,7 @@ class DatabaseConnection {
 		$stmt->execute( array(':fk_username' => $fk_username) );
 		$row = $stmt->fetch( PDO::FETCH_ASSOC );
 		
-		$return $row;
+		return $row;
 	}
 	
 	/*********************************************************************************************
@@ -209,7 +218,7 @@ class DatabaseConnection {
 		$stmt->execute( array(':fk_username' => $fk_username) );
 		$row = $stmt->fetch( PDO::FETCH_ASSOC );
 	
-		$return $row;
+		return $row;
 	}
 	
 }
