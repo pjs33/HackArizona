@@ -143,29 +143,30 @@
       require_once("view_components/navbar.php");
     ?>
 
-    <div id="bodyContent">
-      <h1 id="issue-name">User Profile</h1>
+      <div id="bodyContent">
+      <h1 id="issue-name">Issue Submission Form</h1>
 
           <div class="textInfo">
             
             <div id="text-para"> 
                 
+              <form action="/HackArizona/scripts/php/controller.php" method="post">
+              <input type="text" name="username" placeholder="Username"><br>
+              <input type="password" name="password" placeholder="Password"><br>
+
+          <input type="submit" value="Submit" name="login">
+        </form>
+
+
             </div>
              
-            <div id="picture">
-              <img src="https://lh5.ggpht.com/-y_80LZ2D6hbQrnhDyLjMYocM4ZDr0H06IFj5QPiof39wovHPASWp3oUnXMgZw0X5vo=w300" style="width:404px;height:390px;">
-             
-             </div>
-            <br>
-            
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/aTbtKRdYbYo" frameborder="0" allowfullscreen></iframe>
-        
-        </div> <!--topInfo end-->
+          </div> <!--topInfo end-->
+
       </div> <!--bodyContent end-->
-      <?php
-      require_once("view_components/footbar.php");
-      ?>
-      
+
+<?php
+  require_once("view_components/footbar.php");
+?>  
 
   </body>
 </html>
