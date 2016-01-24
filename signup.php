@@ -106,7 +106,7 @@
 
     <div id="bodyContent">
       <div id="box" class="well">
-        <h3 id="h3_format"> Sign Up </h3>
+        <h3> Sign Up </h3>
         <form action="/HackArizona/scripts/php/controller.php" method="post">
           <input type="text" name="username" placeholder="Username"><br>
           

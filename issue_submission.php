@@ -60,7 +60,7 @@
       width: 960px;
       margin-left: auto;
       margin-right: auto;
-      height: 1000px;
+      height: 448px;
       box-shadow: 0 0 10px #888888;
       border-radius: 0px 0px 10px 10px;
       background: white;
@@ -70,6 +70,14 @@
 
     body {
       background: #f2f2f2;
+    }
+
+    #bodyContent input {
+      margin-top:10px;
+    }
+
+    #bodyContent select {
+      margin-top:10px;
     }
 
     #issue-name {
@@ -133,6 +141,18 @@
       
    }
 
+   #box {
+      width:450px;
+      margin:5px auto 20px auto;
+      padding:0px 0px 20px 0px;
+      padding-top:20px;
+   }
+
+   #box input {
+      margin-top:10px;
+   }
+
+
 
   </style>
 
@@ -144,24 +164,40 @@
     ?>
 
       <div id="bodyContent">
-      <h1 id="issue-name">Issue Submission Form</h1>
+        <div id="box" class="well">
+          <h3 id="issue-name">Issue Submission Form</h3>
+            <form action="/HackArizona/scripts/php/controller.php" method="post">
+              <input type="text" name="issue_name" placeholder="Issue Name"><br>
 
-          <div class="textInfo">
-            
-            <div id="text-para"> 
-                
-              <form action="/HackArizona/scripts/php/controller.php" method="post">
-              <input type="text" name="username" placeholder="Username"><br>
-              <input type="password" name="password" placeholder="Password"><br>
+              <select>
+                <option value="local">Please select the scope of your issue.</option>
+                <option value="local">Local Level</option>
+                <option value="state">State Level</option>
+                <option value="national">National Level</option>
+              </select><br>
 
-          <input type="submit" value="Submit" name="login">
-        </form>
+              <select>
+                <option value="1000">Please select the target goal amount.</option>
+                <option value="1000">$1,000</option>
+                <option value="10000">$10,000</option>
+                <option value="50000">$50,000</option>
+                <option value="100000">$100,000</option>
+                <option value="250000">$250,000</option>
+                <option value="500000">$500,000</option>
+                <option value="1000000">$1,000,000</option>
+              </select><br>
+
+              <input type="text" name="picture" placeholder="Picture URL"><br>
+              <input type="text" name="lobbyist_username" placeholder="Lobbyist Username"><br>
+
+              <?php if( isset($_GET["failed"]) ) { ?>
+              <p style="color:red;margin-top:10px;margin-bottom:0px;">Invalid Lobbyist Username.</p>
+              <?php } ?>  
 
 
-            </div>
-             
-          </div> <!--topInfo end-->
-
+              <input type="submit" value="Submit Issue" name="send_issue">
+            </form>
+          </div>
       </div> <!--bodyContent end-->
 
 <?php
