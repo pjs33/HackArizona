@@ -113,7 +113,7 @@
           <input type="text" name="username" placeholder="Username"><br><br>
           <input type="password" name="password" placeholder="Password"><br>
           <?php if( isset($_GET["failed"]) ) { ?>
-            <p style="color:red;">Incorrect Username or Password</p>
+            <p style="color:red;margin-top:10px;">Incorrect Username or Password</p>
           <?php } ?>
           <br>
           <input type="submit" value="Submit" name="login">
