@@ -98,9 +98,9 @@ session_start();
    		padding: 10px;
    }
    #picture{
-   		width:50%;
    		float:right;
    		padding-top: 50px;
+      padding-right:25px;
    		
    }
 
@@ -121,43 +121,39 @@ session_start();
             
               <div id="text-para"> 
               
-              <h2>Meet the team</h2>
-              		
-              	  <br>
-              	  CEO/CFO: Tay Tay
-              	  <br>
-              	  <br>
-	              Tokage Eternal Kawaiiiiii Sunshine
-	              <br>
-	              <br>
-	              Daniel Situ
-	               <br>
-	               <br>
-	              Peter "Peeta" Sequieros
-	               <br>
-	               <br>
-	              Michael "the Italian Stallion" Lewelling
-	               <br>
-	               <br>
-	              Rubi "Michel's Wifu" Ballesteros
-	               <br>
-	               <br>
-	              Michel Sanchez
-	               <br>
-	               <br>
-	              Fabian de la Pena Montero Garcia 
-	               
+              <h2> Our Team </h2>
+
+              <br>
+              Rubi Ballesteros
+              <br>
+              <br>
+              Michael Lewelling
+              <br>
+              <br>
+              Michel Sanchez
+              <br>
+              <br>
+              Peter Siqueiros
+              <br>
+              <br>
+              Daniel Situ
+              <br>
+              <br>
+	            Andre Takagi
+              <br>
+              <br>	
+              <br>
+              <br>         
+
 	           </div>
 	           
-	           <div id="picture">
-	           		<img src="http://www.animeinferno.com.au/wp-content/uploads/2015/10/aot2.jpg" style="width:404px;height:350px;">
+	           		<img id = "picture" src="http://localhost/img/HappyPicture.jpg" width = 480 height = 290 >
 	           
-	           </div>
             <br>
             
    
-            
-            <iframe width="560" height="295" src="https://www.youtube.com/embed/e-ORhEE9VVg" frameborder="0" allowfullscreen></iframe>
+            <img id = "picture" src="http://localhost/img/HappyPicture.jpg" width = 480 height = 290 >
+            <!-- <iframe width="560" height="295" src="https://www.youtube.com/embed/e-ORhEE9VVg" frameborder="0" allowfullscreen></iframe> --!>
         
         </div> <!--topInfo end-->
       </div> <!--bodyContent end-->
