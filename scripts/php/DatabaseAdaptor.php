@@ -127,9 +127,9 @@ class DatabaseConnection {
 		$startdate = $startdate->format("D, M d Y");
 		$enddate = $startdate->format("D, M d Y");
 	
-		$sql = "INSERT INTO issues(issue_name, issue_scope, issue_start_date, issue_end_date, goal_amount, current_amount, num_donors, picture, fk_lobbyist_username) VALUES(:issue_name, :issue_scope, :issue_start_date, :issue_end_date, :goal_amount, :current_amount, :num_donors, :picture, :fk_lobbyist_username);";
+		$sql = "INSERT INTO issues(issue_name, issue_scope, issue_start_date, issue_end_date, goal_amount, picture, fk_lobbyist_username) VALUES(:issue_name, :issue_scope, :issue_start_date, :issue_end_date, :goal_amount, :picture, :fk_lobbyist_username);";
 		$stmt = $this->DB->prepare( $sql );
-		$stmt->execute( array(':issue_name' => $issue_name, ':issue_scope' => $issue_scope, ':issue_start_date' => $startdate, ':issue_end_date' => $enddate, ':goal_amount' => $goal_amount, ':current_amount' => 0, ':num_donors' => 0, ':picture' => $picture, ':fk_lobbyist_username' => $fk_lobbyist_username) );
+		$stmt->execute( array(':issue_name' => $issue_name, ':issue_scope' => $issue_scope, ':issue_start_date' => $startdate, ':issue_end_date' => $enddate, ':goal_amount' => $goal_amount, ':picture' => $picture, ':fk_lobbyist_username' => $fk_lobbyist_username) );
 	}
 	
 	public function getIssue($issue_id) {
