@@ -268,6 +268,15 @@ class DatabaseConnection {
 		return $sum;
 	}
 	
+	public function countDonators($fk_issue_id) {
+		$sql = "SELECT * FROM donations WHERE fk_issue_id = :fk_issue_id;";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute( array(':fk_issue_id' => $fk_issue_id) );
+		$row = $stmt->fetchAll( PDO::FETCH_ASSOC );
+		
+		return $count($row);
+	}
+	
 	public function donatedTo($fk_username) {
 		$sql = "SELECT * FROM donations WHERE fk_username = :fk_username;";
 		$stmt = $this->DB->prepare( $sql );
