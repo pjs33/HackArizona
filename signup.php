@@ -27,7 +27,7 @@
       width: 960px;
       margin-left: auto;
       margin-right: auto;
-      height: 475px;
+      height: 1000px;
       box-shadow: 0 0 10px #888888;
       border-radius: 0px 0px 10px 10px;
       background: white;
@@ -42,8 +42,7 @@
     #box{
       width:450px;
       margin:5px auto 20px auto;
-      padding:20px;
-      padding-top:50px;
+      padding:10px 0px 10px 0px;
     }
 
     #issue-name {
@@ -102,11 +101,13 @@
 
     <div id="bodyContent">
       <div id="box" class="well">
-        <form action="/sHackArizona/scripts/php/controller.php" method="post">
-          <input type="text" name="username" placeholder="Username"><br><br>
-          <input type="password" name="password" placeholder="Password"><br>
+        <form action="" method="post">
+          Username:<br>
+          <input type="text" name="username"><br>
+          Password:<br>
+          <input type="text" name="password"><br>
           <br>
-          <input type="submit" value="Submit" name="login">
+          <input type="submit" value="Submit">
         </form>
       </div>
     </div> <!--bodyContent end-->
