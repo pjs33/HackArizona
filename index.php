@@ -235,20 +235,20 @@
       <div id="popularIssuesContent">
 
         <div id="popularIssues">
-          <a href="http://localhost/HackArizona/issue_view.php">
+          <a id="issueLink1" href="http://localhost/HackArizona/issue_view.php">
             <div class="issue">
               <h3 id="issueTitle1"></h3>
               <img id="imgThumb1">
             </div>
           </a>
 
-          <a href="http://localhost/HackArizona/issue_view.php">
+          <a id="issueLink2" href="http://localhost/HackArizona/issue_view.php">
             <div class="issue">
               <h3 id="issueTitle2"></h3>
               <img id="imgThumb2">
             </div>
           </a>
-          <a href="http://localhost/HackArizona/issue_view.php">
+          <a id="issueLink3" href="http://localhost/HackArizona/issue_view.php">
             <div class="issue">
               <h3 id="issueTitle3"></h3>
               <img id="imgThumb3">
@@ -295,6 +295,9 @@
               $("#imgThumb2").attr("src", issuesArray[1]["picture"]);
               $("#issueTitle3").text(issuesArray[2]["issue_name"]);
               $("#imgThumb3").attr("src", issuesArray[2]["picture"]);
+              $("#issueLink1").attr("href", "http://localhost/HackArizona/issue_view.php?i=" + issuesArray[0]["issue_id"]);
+              $("#issueLink2").attr("href", "http://localhost/HackArizona/issue_view.php?i=" + issuesArray[1]["issue_id"]);
+              $("#issueLink3").attr("href", "http://localhost/HackArizona/issue_view.php?i=" + issuesArray[2]["issue_id"]);
             }
           });
         }

@@ -170,25 +170,25 @@ class DatabaseConnection {
 			if ($sum > $thirdSum) {
 				$thirdSum = $sum;
 				$third = $row[$i]['issue_id'];
-			}
-			
-			if ($sum > $secondSum) {
-				$thirdSum = $secondSum;
-				$third = $second;
+
+				if ($sum > $secondSum) {
+					$thirdSum = $secondSum;
+					$third = $second;
 				
-				$secondSum = $sum;
-				$second = $row[$i]['issue_id'];
-			}
-			
-			if ($sum > $firstSum) {
-				$thirdSum = $secondSum;
-				$third = $second;
-			
-				$secondSum = $firstSum;
-				$second = $first;
+					$secondSum = $sum;
+					$second = $row[$i]['issue_id'];
+
+					if ($sum > $firstSum) {
+						$tempSum = $firstSum;
+						$temp = $first;
 				
-				$firstSum = $sum;
-				$first = $row[$i]['issue_id'];
+						$firstSum = $sum;
+						$first = $row[$i]['issue_id'];
+
+						$secondSum = $tempSum;
+						$second = $temp;
+					}
+				}
 			}
 		}
 		
