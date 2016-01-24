@@ -26,7 +26,7 @@
       width: 960px;
       margin-left: auto;
       margin-right: auto;
-      height: 445px;
+      height: 448px;
       box-shadow: 0 0 10px #888888;
       border-radius: 0px 0px 10px 10px;
       background: white;

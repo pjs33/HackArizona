@@ -60,7 +60,7 @@
       width: 960px;
       margin-left: auto;
       margin-right: auto;
-      height: 800px;
+      height: 1000px;
       box-shadow: 0 0 10px #888888;
       border-radius: 0px 0px 10px 10px;
       background: white;
@@ -162,9 +162,9 @@
         
         </div> <!--topInfo end-->
       </div> <!--bodyContent end-->
-       <?php
+      <?php
       require_once("view_components/footbar.php");
-    ?>
+      ?>
       
 
   </body>
