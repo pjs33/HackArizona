@@ -99,7 +99,7 @@
     <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona">Home</a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
-    <a class="nav-bar-link btn primary-btn" href="#">About Us</a>
+    <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/about_us.php">About Us</a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
     <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/issue_voting.php">Vote on Issues</a>
