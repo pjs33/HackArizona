@@ -163,7 +163,7 @@ class DatabaseConnection {
 		$first  = -1;
 		$second = -1;
 		$third  = -1;
-		return $row[0]['issue_id'];
+		return $row[0]['issue_name'];
 		/*
 		for ($i = 0; $i < count($row); $i++) {
 			$sum = $this->countVotes($row[$i]['issue_id']);
