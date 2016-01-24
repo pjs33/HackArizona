@@ -3,7 +3,7 @@
 #container{
 
 	background: rgba(30,30,30,0.9);
-	height: 80px;
+	height: 50px;
 	
 }
 .footer-header{
@@ -12,16 +12,19 @@
 }
 .footer-header a{
 	float:right;
-	padding:30px;
+	padding:10px;
 }
 .footer-header h2{
-	clear:both;
+	margin:auto;
 	float:left;
 	font-color: red;
+	padding-bottom:10px;
 }
 .footertitle{
 color: white;
 padding-left: 25px;
+
+
 }
 
 /*footbar start*/
