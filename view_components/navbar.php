@@ -112,12 +112,13 @@
     <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/how_it_works.php">How It Works</a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
-    <a class="nav-bar-link btn primary-btn" href="#">
-      <?php if( isset($_SESSION["username"]) ) { ?>
+    <?php if( isset($_SESSION["username"]) ) { ?>
+      <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/logout.php">
         Logout
-      <?php } else { ?> 
+    <?php } else { ?> 
+      <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/login.php">
         Login
-      <?php } ?>
+    <?php } ?>
     </a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
