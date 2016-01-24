@@ -113,14 +113,14 @@
     ?>
 
     <div id="bodyContent">
-      <h1 id="issue-name">Queries? Questions? Suggestions?</h1>
+      <h2 id="issue-name">Questions? Suggestions?</h2>
  
 
           <div class="textInfo">
             
               <div id="text-para"> 
               
-              <h2>Let us know!</h2>
+              <h3>Let us know!</h3>
               		
               	 Contact us at contact@thelobbyist.com or call us at 1(800)123-4567.
 

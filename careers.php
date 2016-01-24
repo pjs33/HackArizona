@@ -103,6 +103,16 @@
    		
    }
 
+   #box {
+      width:450px;
+      margin:5px auto 20px auto;
+      padding:0px 0px 20px 0px;
+      padding-top:20px;
+   }
+
+   #box input {
+      margin-top:10px;
+   }
 
   </style>
 
@@ -113,7 +123,7 @@
     ?>
 
     <div id="bodyContent">
-      <h1 id="issue-name">Career Opportunities</h1>
+      <h2 id="issue-name">Career Opportunities</h2>
  
 
           <div class="textInfo">
@@ -122,7 +132,8 @@
               
               <h2>Oops!</h2>
               		
-              	 There doesn't seem to be anything here. (._.)
+              <h4>There doesn't seem to be anything here. (._.)</h4>
+              <h4>Please try again later!</h4>
 
 	           </div>
 	           

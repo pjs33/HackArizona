@@ -110,7 +110,7 @@
     ?>
 
     <div id="bodyContent">
-      <h1 id="issue-name">Experiencing Issues?</h1>
+      <h2 id="issue-name">Experiencing Issues?</h2>
  
 
           <div class="textInfo">
