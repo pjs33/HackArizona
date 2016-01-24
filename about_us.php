@@ -151,8 +151,6 @@ session_start();
 	           <img id = "picture" src="http://localhost/img/HappyPicture.jpg" width = 480 height = 290 >
 	           
             <br>
-          
-            <iframe width="560" height="295" src="https://www.youtube.com/embed/e-ORhEE9VVg" frameborder="0" allowfullscreen></iframe>
 
       </div> <!--bodyContent end-->
        <?php
