@@ -276,7 +276,7 @@ session_start();
           //changeBoolean = 1;
           changeShowAll();
           //resetPopular();
-          $("#popularIssuesContent").css("margin-top", "-25px");
+          $("#popularIssuesContent").css("margin-top", "-35px");
           $("#seeAllIssues").addClass("btn-primary");
           $("#nationalCaret").css("display", "");
           $("#popularIssues").css("border-top", "15px solid #0c234b");
@@ -338,6 +338,8 @@ session_start();
           $("#seeAllIssues").removeClass("btn-primary");
           $("#seeAllIssues").removeClass("btn-danger");
         }
+
+        $("#nationalIssues").click();
       });
 
         
