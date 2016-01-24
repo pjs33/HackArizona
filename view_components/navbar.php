@@ -115,11 +115,20 @@
     <?php if( isset($_SESSION["username"]) ) { ?>
       <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/logout.php">
         Logout
+      </a>
     <?php } else { ?> 
       <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/login.php">
         Login
+      </a>
+
+      <div class="nav-link-separator"></div>
+      <div class="nav-link-separator"></div>
+
+      <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/signup.php">
+        Sign-up
+      </a>
+
     <?php } ?>
-    </a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
   </div>
