@@ -156,7 +156,54 @@ class DatabaseConnection {
 		$stmt->execute( array(':issue_scope' => issue_scope) );
 		$row = $stmt->fetchAll( PDO::FETCH_ASSOC );
 	
-		return $row;
+		$firstSum  = -1;
+		$secondSum = -1;
+		$thirdSum  = -1;
+		
+		$first  = -1;
+		$second = -1;
+		$third  = -1;
+		
+		for ($i = 0; $i < count($row); $i++) {
+			$sum = $this->countVotes($row[$i]['issue_id']);
+			
+			if ($sum > $thirdSum) {
+				$thirdSum = $sum;
+				$third = $i;
+			}
+			
+			if ($sum > $thirdSum) {
+				$thirdSum = $sum;
+				$third = $i;
+			}
+			
+			if ($sum > $secondSum) {
+				$thirdSum = $secondSum;
+				$third = $second;
+				
+				$secondSum = $sum;
+				$second = $i;
+			}
+			
+			if ($sum > $firstSum) {
+				$thirdSum = $secondSum;
+				$third = $second;
+			
+				$secondSum = $firstSum;
+				$second = $first;
+				
+				$firstSum = $sum;
+				$first = $i;
+			}
+		}
+		
+		$issues = array();
+		
+		$issues = array_merge($issues, $this->getIssue($first));
+		$issues = array_merge($issues, $this->getIssue($second));
+		$issues = array_merge($issues, $this->getIssue($third));
+		
+		return $issues;
 	}
 	
 	/*********************************************************************************************
