@@ -42,7 +42,11 @@
     #box {
       width:450px;
       margin:5px auto 20px auto;
-      padding:10px 0px 10px 0px;
+      padding:0px 0px 20px 0px;
+    }
+
+    #box input {
+      margin-top:10px;
     }
 
 
@@ -102,13 +106,18 @@
 
     <div id="bodyContent">
       <div id="box" class="well">
-        <h3 id="h3_format"> Login </h3>
+        <h3 id="h3_format"> Sign Up </h3>
         <form action="" method="post">
-          Username:<br>
-          <input type="text" name="username"><br>
-          Password:<br>
-          <input type="text" name="password"><br>
-          <br>
+          <input type="text" name="username" placeholder="Username"><br>
+          
+          <input type="text" name="realname" placeholder="Full Name (First, Last)"><br>
+          <input type="text" name="email" placeholder="Email Address"><br>
+          <input type="text" name="address" placeholder="Address"><br>
+          <input type="text" name="city" placeholder="City"><br>
+          <input type="text" name="state" placeholder="State"><br>
+          <input type="text" name="zipcode" placeholder="Zipcode"><br>
+
+          <input type="password" name="password" placeholder="Password"><br>
           <input type="submit" value="Submit">
         </form>
       </div>

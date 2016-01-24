@@ -39,17 +39,14 @@
       background: #f2f2f2;
     }
 
-    #box{
+    #box {
       width:450px;
       margin:5px auto 20px auto;
-      padding:20px;
+      padding:0px 0px 20px 0px;
     }
 
-    #h3_format {
-      margin-top:0px;
-      text-align: center;
-      font-size: 15pt;
-      font-weight: 400;
+    #box input {
+      margin-top:10px;
     }
 
     #issue-name {
@@ -108,9 +105,9 @@
 
     <div id="bodyContent">
       <div id="box" class="well">
-        <h3 id="h3_format"> Login </h3>
+        <h3> Login </h3>
         <form action="/HackArizona/scripts/php/controller.php" method="post">
-          <input type="text" name="username" placeholder="Username"><br><br>
+          <input type="text" name="username" placeholder="Username"><br>
           <input type="password" name="password" placeholder="Password"><br>
           <?php if( isset($_GET["failed"]) ) { ?>
             <p style="color:red;margin-top:10px;margin-bottom:0px;">Incorrect Username or Password</p>
