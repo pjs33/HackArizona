@@ -36,7 +36,7 @@
 		
 	       <div class="footer-header">
 			 		<a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/help.php">Help</a>
-			 		<a class="nav-bar-link btn primary-btn" href="http://google.com">Careers</a>
+			 		<a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/careers.php">Careers</a>
 			 		<a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/contact_us.php">Contact Us</a>	
 			</div>
 	
