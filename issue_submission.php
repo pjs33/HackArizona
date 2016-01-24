@@ -191,7 +191,7 @@
               <input type="text" name="lobbyist_username" placeholder="Lobbyist Username"><br>
 
               <?php if( isset($_GET["failed"]) ) { ?>
-              <p style="color:red;margin-top:10px;margin-bottom:0px;">Invalid Lobbyist Username.</p>
+              <p style="color:red;margin-top:10px;margin-bottom:0px;">Invalid Lobbyist Username</p>
               <?php } ?>  
 
 
