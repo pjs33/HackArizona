@@ -209,7 +209,7 @@
 
       <!-- START COLUMN BUTTONS -->
 
-      <h2 id="popularIssues">
+      <h2 id="popularIssuesHeader">
           Popular Issues
       </h2>
 
@@ -272,10 +272,10 @@
           //changeBoolean = 1;
           changeShowAll();
           //resetPopular();
-          $("#popularIssuesContent").css("margin-top", "-25px");
+          $("#popularIssuesContent").css("margin-top", "-35px");
           $("#seeAllIssues").addClass("btn-primary");
           $("#nationalCaret").css("display", "");
-          $(".issue").css("border", "3px solid #337ab7");
+          $("#popularIssues").css("border-top", "15px solid #0c234b");
         });
 
         $("#stateIssues").click(function() {
@@ -283,10 +283,10 @@
           //changeBoolean = 1;
           changeShowAll();
           //resetPopular();
-          $("#popularIssuesContent").css("margin-top", "-25px");
+          $("#popularIssuesContent").css("margin-top", "-35px");
           $("#seeAllIssues").addClass("btn-success");
           $("#stateCaret").css("display", "");
-          $(".issue").css("border", "3px solid black");
+          $("#popularIssues").css("border-top", "15px solid #0c234b");
         });
 
         $("#localIssues").click(function() {
@@ -294,10 +294,11 @@
           //changeBoolean = 1;
           changeShowAll();
           //resetPopular();
-          $("#popularIssuesContent").css("margin-top", "-25px");
+          $("#popularIssuesContent").css("margin-top", "-35px");
           $("#seeAllIssues").addClass("btn-danger");
           $("#localCaret").css("display", "");
-          $(".issue").css("border", "3px solid #d9534f");
+          //$(".issue").css("border", "3px solid #d9534f");
+          $("#popularIssues").css("border-top", "15px solid #0c234b");
         });
 
         function ajaxGetPopularIssues(scope) {

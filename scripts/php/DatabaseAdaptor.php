@@ -287,6 +287,13 @@ class DatabaseConnection {
 	
 		return $row;
 	}
+
+	public function returnVotingIssues() {
+		$sql = "SELECT * FROM votingIssues";
+		$stmt = $this->DB->prepare( $sql );
+		$row = $stmt->fetchAll( PDO::FETCH_ASSOC );
+		return $row;
+	}
 	
 }
 ?>

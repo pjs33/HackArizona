@@ -14,7 +14,28 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+    <?php
+      require_once("./scripts/php/DatabaseAdaptor.php");
+      $adapter = new DatabaseConnection();
 
+      $issueArr = $adapter->returnVotingIssues();
+
+    ?>
+
+    <script>
+
+    var issuesArray = <?php echo $issueArr?>;
+
+    for (int i = 0: i < issuesArray.length; i++) {
+      $("#listOfIssues").append('<div class="panel panel-primary">
+            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
+                <h3 class="panel-title">Issue #1</h3>
+            </div>
+            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
+        </div>')
+    }
+
+    </script>
     
     <style>
     .carousel-inner > .item > img,
@@ -133,78 +154,7 @@
       <!-- END COLUMN BUTTONS -->
 
       <div id="listOfIssues">
-        
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
-                <h3 class="panel-title">Issue #1</h3>
-            </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
-
-        </div>
-
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
-                <h3 class="panel-title">Issue #2</h3>
-            </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
-        </div>
-
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
-                <h3 class="panel-title">Issue #3</h3>
-            </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
-        </div>
-
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
-                <h3 class="panel-title">Issue #4</h3>
-            </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
-        </div>
-
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
-                <h3 class="panel-title">Issue #5</h3>
-            </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
-        </div>
-
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
-                <h3 class="panel-title">Issue #6</h3>
-            </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
-        </div>
-
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
-                <h3 class="panel-title">Issue #7</h3>
-            </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
-        </div>
-
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
-                <h3 class="panel-title">Issue #8</h3>
-            </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
-        </div>
-
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
-                <h3 class="panel-title">Issue #9</h3>
-            </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
-        </div>
-
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color: #0c234b;border-color: #0c234b;">
-                <h3 class="panel-title">Issue #10</h3>
-            </div>
-            <div class="panel-body">The requested page has been permanently moved to a new location. <button style="float: right;">Get info!</button></div>
-        </div>
-
+        <!--This is where JS will place all the issues from SQL-->
       </div>
 
 
