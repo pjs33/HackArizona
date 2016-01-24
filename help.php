@@ -130,7 +130,7 @@
               	 
               	 <h3>Who can I contact for assistance?</h3>
               	 
-              	 You can send us as an email at contact@thelobbyist.com or call us at 1(800) 626-TECH for further assistance.
+              	 You can send us as an email at contact@thelobbyist.com or call us at 1(800)123-4567 for further assistance.
               	 
               	 
               	 

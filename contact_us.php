@@ -122,8 +122,8 @@
               
               <h2>Let us know!</h2>
               		
-              	 Contact us at contact@thelobbyist.com
-	               
+              	 Contact us at contact@thelobbyist.com or call us at 1(800)123-4567.
+
 	           </div>
 	           
 	           <div id="picture">
