@@ -174,19 +174,19 @@ session_start();
             <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 900px; height: 450px; overflow: hidden;">
                 <div data-p="112.50" style="display: none;">
                     <img data-u="image" src="./css/images/img1.jpg" />
-                    <div data-u="thumb">This is a test link! <a href="http://localhost/HackArizona/issue_view.php">Click here!</a></div>
+                    <div data-u="thumb">YOu might want to take a look at <a style="color: #ab0520;" href="http://localhost/HackArizona/issue_view.php?i=1">this</a>....</div>
                 </div>
                 <div data-p="112.50" style="display: none;">
                     <img data-u="image" src="./css/images/img2.jpg" />
-                    <div data-u="thumb">Check out this <a href="http://localhost/HackArizona/issue_view.php">page!</a></div>
+                    <div data-u="thumb">Check out this <a style="color: #ab0520;" href="http://localhost/HackArizona/issue_view.php?i=3">page!</a></div>
                 </div>
                 <div data-p="112.50" style="display: none;">
                     <img data-u="image" src="./css/images/img4.jpg" />
-                    <div data-u="thumb">Take a look into <a href="http://localhost/HackArizona/issue_view.php">this.</a> You might be interested in it!</div>
+                    <div data-u="thumb">Take a look into <a style="color: #ab0520;" href="http://localhost/HackArizona/issue_view.php?i=10">this.</a> You might be interested in it!</div>
                 </div>
                 <div data-p="112.50" style="display: none;">
                     <img data-u="image" src="./css/images/img5.jpg" />
-                    <div data-u="thumb">Fix this city today! <a href="http://localhost/HackArizona/issue_view.php">Click here!</a></div>
+                    <div data-u="thumb">Fix this city today! <a style="color: #ab0520;" href="http://localhost/HackArizona/issue_view.php?i=7">Click here!</a></div>
                 </div>
             </div>
             <!-- Thumbnail Navigator -->
