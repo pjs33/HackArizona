@@ -260,6 +260,36 @@
     <script>
       $(document).ready(function() {
 
+        ajaxGetPopularIssues("national");
+
+        $("#nationalIssues").click(function() {
+          ajaxGetPopularIssues("national");
+        });
+
+        function ajaxGetPopularIssues(scope) {
+          $.post("./scripts/php/controller.php",
+          {
+            getPopularIssues: "",
+            scope: scope
+          },
+          function(data, status){
+            if(status == "success") {
+              var issuesArray = JSON.parse(data);
+
+              $("#issueTitle1").text(issuesArray[0]["issue_name"]);
+              $("#imgThumb1").attr("src", issuesArray[0]["picture"]);
+              $("#issueTitle2").text(issuesArray[1]["issue_name"]);
+              $("#imgThumb2").attr("src", issuesArray[1]["picture"]);
+              $("#issueTitle3").text(issuesArray[2]["issue_name"]);
+              $("#imgThumb3").attr("src", issuesArray[2]["picture"]);
+            }
+          });
+        }
+      });
+
+        
+
+        /*
         var changeBoolean = 0;
 
         var randomIssues = ["TayTay Today","LETS BUILD A WALL","Support Local PlayGround","Local Pothole", 'Dog "Lost"',"Pet shark on the loose", "President Obama...", "Stick In Road", "Mountain Currently Exploding..."];
@@ -340,7 +370,7 @@
         $("#seeAllIssues").removeClass("btn-info");
         $("#seeAllIssues").removeClass("btn-primary");
         $("#seeAllIssues").removeClass("btn-danger");
-      }
+      }*/
 
     </script>
 
