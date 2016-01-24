@@ -11,6 +11,7 @@
 
 
 		if( $model->verifyLogin($username, $password) ) {
+			session_start();
 			$_SESSION["username"] = $username;
 			header("location: http://localhost/HackArizona/");
 		} else {

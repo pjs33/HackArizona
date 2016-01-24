@@ -100,15 +100,25 @@
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
     <a class="nav-bar-link btn primary-btn" href="#">About Us</a>
+    <?php  
+      if( isset($_SESSION["username"]) ) { 
+    ?>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
     <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/issue_voting.php">Vote on Issues</a>
+    <?php } ?>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
     <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/how_it_works.php">How It Works</a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
-    <a class="nav-bar-link btn primary-btn" href="#">Login</a>
+    <a class="nav-bar-link btn primary-btn" href="#">
+      <?php if( isset($_SESSION["username"]) ) { ?>
+        Logout
+      <?php } else { ?>
+        Login
+      <?php } ?>
+    </a>
     <div class="nav-link-separator"></div>
     <div class="nav-link-separator"></div>
   </div>
