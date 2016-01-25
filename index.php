@@ -242,21 +242,21 @@ session_start();
         <div id="popularIssues">
           <a id="issueLink1" href="http://localhost/HackArizona/issue_view.php">
             <div class="issue">
-              <h3 id="issueTitle1"></h3>
-              <img id="imgThumb1" class="img-rounded" alt="imgThumb1" width="275" height="200">
+              <h3 id="issueTitle1" style="font-size: 15pt;"></h3>
+              <img id="imgThumb1" class="img-circle" alt="imgThumb1" width="200" height="200">
             </div>
           </a>
 
           <a id="issueLink2" href="http://localhost/HackArizona/issue_view.php">
             <div class="issue">
-              <h3 id="issueTitle2"></h3>
-              <img id="imgThumb2" class="img-rounded" alt="imgThumb2" width="275" height="200">
+              <h3 id="issueTitle2" style="font-size: 15pt;"></h3>
+              <img id="imgThumb2" class="img-circle" alt="imgThumb2" width="200" height="200">
             </div>
           </a>
           <a id="issueLink3" href="http://localhost/HackArizona/issue_view.php">
             <div class="issue">
-              <h3 id="issueTitle3"></h3>
-              <img id="imgThumb3" class="img-rounded" alt="imgThumb3" width="275" height="200">
+              <h3 id="issueTitle3" style="font-size: 15pt;"></h3>
+              <img id="imgThumb3" class="img-circle" alt="imgThumb3" width="200" height="200">
             </div>
           </a>
         </div>
