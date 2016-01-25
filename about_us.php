@@ -19,27 +19,23 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     
     <style>
-    .carousel-inner > .item > img,
-    .carousel-inner > .item > a > img {
-        width: 100%;
-        margin: auto;
-        height: 300px;
-    }
 
     #bodyContent {
       width: 960px;
+      height:100%;
       margin-left: auto;
       margin-right: auto;
-      height: 800px;
       box-shadow: 0 0 10px #888888;
       border-radius: 0px 0px 10px 10px;
       background: white;
       text-align: center;
       padding-top: 30px;
+      overflow: auto;
     }
 
-    body {
+    body, html {
       background: #f2f2f2;
+      height: 89.2%;
     }
 
     #issue-name {
@@ -64,40 +60,17 @@ session_start();
       width: 430px;
       float: right;
     }
-
-    #textInfo {
-      margin-top: 15px;
-    }
-    #peopleDonating, #moneyRaised, #remainingGoal {
-      font-size: 30pt;
-      color: #5cb85c;
-      width: 380px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    #start_donation {
-      margin: 30px 50px 20px 50px;
-      width: 250px;
-      height: 50px;
-    }
-    #facebookButton, #twitterButton {
-      width: 200px;
-    }
-    #facebookButton {
-      margin-left: 10px;
-    }
     
-    .textInfo {
-     	width:100%
-    
-    }
-    
-   #text-para{
+   #theTeam{
    		width:50%;
    		float:left;
    		padding: 10px;
+
    }
-   #picture{
+   #teamTitle {
+    text-decoration: underline;
+   }
+   #teamPic{
    		float:right;
    		padding-top: 50px;
       padding-right:25px;
@@ -115,50 +88,32 @@ session_start();
 
     <div id="bodyContent">
       <h1 id="issue-name">About Us</h1>
- 
-
-          <div class="textInfo">
             
-              <div id="text-para"> 
-              
-              <h2> Our Team </h2>
+        <div id="theTeam"> 
+          <h2 id="teamTitle"> Our Team </h2>
+          Peter Siqueiros
+          <br>
+          <br>
+          Rubi Ballesteros 
+          <br>
+          <br>
+          Michael Lewelling
+          <br>
+          <br>
+          Daniel Situ
+          <br>
+          <br>
+          Michel Sanchez
+          <br>
+          <br>
+          Andre Takagi      
+        </div>
 
-			  God Empress Taylor "Tay Tay" Swift
-			  <br>
-              <br>
-              Rubi Ballesteros 
-              <br>
-              <br>
-              Michael Lewelling
-              <br>
-              <br>
-              Michel Sanchez
-              <br>
-              <br>
-              Peter Siqueiros
-              <br>
-              <br>
-              Daniel Situ
-              <br>
-              <br>
-	           Andre Takagi
-              <br>
-              <br>	
-              <br>
-              <br>         
-			</div>
-	           
-	           <img id = "picture" src="./img/HappyPicture.jpg" width = "480" height = "290" >
-	           
-            <br>
-          
-            <iframe width="560" height="295" src="https://www.youtube.com/embed/e-ORhEE9VVg" frameborder="0" allowfullscreen></iframe>
-
+        <img id="teamPic" src="./img/HappyPicture.jpg" width="480" height="290" >
       </div> <!--bodyContent end-->
-       <?php
-      require_once("view_components/footbar.php");
+    <?php
+    require_once("view_components/footbar.php");
     ?>
-      
-
   </body>
+   
 </html>
