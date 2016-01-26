@@ -6,10 +6,11 @@ body {
 
 
 #bodyContent {
-    width: 960px;
+    width: 80%;
     padding-left: 30px;
     padding-right: 30px;
     height: 100%;
+    min-height: 426px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 0 10px #888888;
@@ -24,6 +25,8 @@ body {
 #buttonContainer {
     margin-top: 10px;
     width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #popularIssuesHeader {
@@ -38,34 +41,34 @@ body {
   margin-bottom: 25px;
   text-align: center;
   color: black;
+  overflow: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display:inline-block;
 }
 
 
 /*Styling for the popular issues*/
 .issue {
-    width: 275px;
+    width: 280px;
     display: inline-block;
     border-radius: 25px;
-    /*border: 3px solid #333;*/
-    margin-left: 3px;
-    margin-right: 3px;
-    overflow: hidden;
+    margin-left: 10%;
+    margin-right: 10%;
     color: black;
+    float:left;
 }
 
 #popularIssuesContent {
     margin-bottom: 50px;
-    height: 360px;
+    height: 100%;
+    overflow: auto;
 }
 
 html {
   position: relative;
   min-height: 100%;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
 }
 
 .footer {

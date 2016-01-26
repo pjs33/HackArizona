@@ -3,34 +3,27 @@ $(document).ready(function() {
         ajaxGetPopularIssues("national");
 
         $("#nationalIssues").click(function() {
+          //$( ".issueLink" ).remove();
           ajaxGetPopularIssues("national");
           //changeBoolean = 1;
-          changeShowAll();
           //resetPopular();
           $("#seeAllIssues").addClass("btn-primary");
-          $("#nationalCaret").css("display", "");
         });
 
         $("#stateIssues").click(function() {
+          $( ".issueLink" ).remove();
           ajaxGetPopularIssues("state");
           //changeBoolean = 1;
-          changeShowAll();
           //resetPopular();
-
           $("#seeAllIssues").addClass("btn-success");
-          $("#stateCaret").css("display", "");
-          $("#popularIssues").css("border-top", "15px solid #0c234b");
         });
 
         $("#localIssues").click(function() {
+          //$( ".issueLink" ).remove();
           ajaxGetPopularIssues("local");
           //changeBoolean = 1;
-          changeShowAll();
           //resetPopular();
           $("#seeAllIssues").addClass("btn-danger");
-          $("#localCaret").css("display", "");
-          //$(".issue").css("border", "3px solid #d9534f");
-          $("#popularIssues").css("border-top", "15px solid #0c234b");
         });
 
         function ajaxGetPopularIssues(scope) {
@@ -42,30 +35,19 @@ $(document).ready(function() {
           function(data, status){
             if(status == "success") {
               var issuesArray = JSON.parse(data);
+              for (var i = 0; i < 6; i++) {
+                var currentNum = (i+1).toString();
 
-              $("#issueTitle1").text(issuesArray[0]["issue_name"]);
-              $("#imgThumb1").attr("src", issuesArray[0]["picture"]);
-              $("#issueTitle2").text(issuesArray[1]["issue_name"]);
-              $("#imgThumb2").attr("src", issuesArray[1]["picture"]);
-              $("#issueTitle3").text(issuesArray[2]["issue_name"]);
-              $("#imgThumb3").attr("src", issuesArray[2]["picture"]);
-              $("#issueLink1").attr("href", "http://localhost/HackArizona/issue_view.php?i=" + issuesArray[0]["issue_id"]);
-              $("#issueLink2").attr("href", "http://localhost/HackArizona/issue_view.php?i=" + issuesArray[1]["issue_id"]);
-              $("#issueLink3").attr("href", "http://localhost/HackArizona/issue_view.php?i=" + issuesArray[2]["issue_id"]);
+                $("#popularIssues").append(
+                  '<a class="issueLink"id="issueLink'+currentNum+'" style="float: left; width: 280px;height: 280px;" href="http://localhost/HackArizona/issue_view.php?i='+ issuesArray[i]["issue_id"]+'">'+
+                  '<div class="issue">'+
+                    '<h3 id="issueTitle'+currentNum+'" style="font-size: 15pt;">'+issuesArray[i]["issue_name"]+'</h3>'+
+                    '<img id="imgThumb' +currentNum+ '" src="'+ issuesArray[i]["picture"] +'" class="img-circle" alt="imgThumb'+currentNum+'" width="200" height="200">'+
+                  '</div></a>');
+              }
+
+              $("#popularIssues").append('<a id="seeAllIssues" style="display: inline-block;" href="#" type="button" class="btn btn-info btn-block">See All Issues</a>');
             }
           });
         }
-
-
-        function changeShowAll() {
-          $("#localCaret").css("display", "none");
-          $("#stateCaret").css("display", "none");
-          $("#nationalCaret").css("display", "none");
-          $("#seeAllIssues").removeClass("btn-success");
-          $("#seeAllIssues").removeClass("btn-info");
-          $("#seeAllIssues").removeClass("btn-primary");
-          $("#seeAllIssues").removeClass("btn-danger");
-        }
-
-        $("#nationalIssues").click();
       });

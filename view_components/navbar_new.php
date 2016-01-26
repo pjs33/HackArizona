@@ -87,14 +87,14 @@
   margin: 2px;
 }
 
-#nav-bar-container.affix {
+#navBar.affix {
   top:0px;
 }
 
 </style>
 <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
 <div id="styleBar"></div>
-  <div id="navBar">
+  <div id="navBar" data-spy="affix" data-offset-top="100">
     <!--site logo
     <img id="logo" data-spy="affix" src="./img/logov3.jpg">-->
     <a id="homeLink" href ="http://localhost/HackArizona/index_new.php">
@@ -109,7 +109,7 @@
     <!-- LINKS -->
 
     <div id="nav-bar-place-holder">
-      <div id="nav-bar-container" data-spy="affix" data-offset-top="100">
+      <div id="nav-bar-container">
         <div id="nav-bar">
           <a class="nav-bar-link btn primary-btn" href="http://localhost/HackArizona/about_us.php">About Us</a>
           <?php  

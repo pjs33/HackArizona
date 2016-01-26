@@ -33,13 +33,13 @@ session_start();
       <div id="buttonContainer">
         <div class="row">
           <div id="localIssues" class="col-sm-4">
-      	    <a type="button" style="font-size: 14pt;" class="btn btn-primary btn-block">Local</a>
+      	    <a type="button" style="font-size: 14pt;" class="btn btn-primary btn-block">Create</a>
           </div>
           <div id="stateIssues" class="col-sm-4">
-             <a type="button" style="font-size: 14pt;" class="btn btn-primary btn-block">State</a>
+             <a type="button" style="font-size: 14pt;" class="btn btn-primary btn-block">DESTROY</a>
           </div>
           <div id="nationalIssues" class="col-sm-4">
-            <a type="button" style="font-size: 14pt;" class="btn btn-primary btn-block">National</a>
+            <a type="button" style="font-size: 14pt;" class="btn btn-primary btn-block">Create</a>
           </div>
         </div>
       </div>
@@ -48,31 +48,9 @@ session_start();
       <div id="popularIssuesContent">
 
         <div id="popularIssues">
-          <a id="issueLink1" href="http://localhost/HackArizona/issue_view.php">
-            <div class="issue">
-              <h3 id="issueTitle1" style="font-size: 15pt;"></h3>
-              <img id="imgThumb1" class="img-circle" alt="imgThumb1" width="200" height="200">
-            </div>
-          </a>
-
-          <a id="issueLink2" href="http://localhost/HackArizona/issue_view.php">
-            <div class="issue">
-              <h3 id="issueTitle2" style="font-size: 15pt;"></h3>
-              <img id="imgThumb2" class="img-circle" alt="imgThumb2" width="200" height="200">
-            </div>
-          </a>
-          <a id="issueLink3" href="http://localhost/HackArizona/issue_view.php">
-            <div class="issue">
-              <h3 id="issueTitle3" style="font-size: 15pt;"></h3>
-              <img id="imgThumb3" class="img-circle" alt="imgThumb3" width="200" height="200">
-            </div>
-          </a>
+          <!--Javascript should fill this in from pullPopular.js-->
         </div>
-
-        <a id="seeAllIssues" href="#" type="button" class="btn btn-info btn-block">See All Issues</a>
-
       </div>
-
     </div>
 
 <?php
