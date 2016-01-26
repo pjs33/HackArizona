@@ -46,7 +46,7 @@ $(document).ready(function() {
                   '</div></a>');
               }
 
-              $("#popularIssues").append('<a id="seeAllIssues" style="display: inline-block;" href="#" type="button" class="btn btn-info btn-block">See All Issues</a>');
+              $("#popularIssuesContent").append('<a id="seeAllIssues" style="display: inline-block;" href="#" type="button" class="btn btn-info btn-block">See All Issues</a>');
             }
           });
         }
