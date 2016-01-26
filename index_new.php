@@ -50,6 +50,7 @@ session_start();
         <div id="popularIssues">
           <!--Javascript should fill this in from pullPopular.js-->
         </div>
+        <a id="seeAllIssues" style="display: inline-block;" href="#" type="button" class="btn btn-info btn-block">See All Issues</a>
       </div>
     </div>
 

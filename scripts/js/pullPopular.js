@@ -45,8 +45,6 @@ $(document).ready(function() {
                     '<img id="imgThumb' +currentNum+ '" src="'+ issuesArray[i]["picture"] +'" class="img-circle" alt="imgThumb'+currentNum+'" width="200" height="200">'+
                   '</div></a>');
               }
-
-              $("#popularIssuesContent").append('<a id="seeAllIssues" style="display: inline-block;" href="#" type="button" class="btn btn-info btn-block">See All Issues</a>');
             }
           });
         }
