@@ -153,6 +153,14 @@ class DatabaseConnection {
 	
 		return $row;
 	}
+
+	public function getAllIssuesALL() {
+		$sql = "SELECT * FROM issues";
+		$stmt = $this->DB->prepare( $sql );
+		$stmt->execute();
+		$row = $stmt->fetchAll( PDO::FETCH_ASSOC );	
+		return $row;
+	}
 	
 	public function getPopularIssues($issue_scope) {
 		$sql = "SELECT * FROM issues WHERE issue_scope = :issue_scope;";

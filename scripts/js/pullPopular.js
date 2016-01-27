@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-        ajaxGetPopularIssues("national");
-
         $("#nationalIssues").click(function() {
           //$( ".issueLink" ).remove();
           ajaxGetPopularIssues("national");

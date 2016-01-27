@@ -48,6 +48,25 @@ session_start();
       <div id="popularIssuesContent">
 
         <div id="popularIssues">
+
+          <?php 
+          require_once("./scripts/php/DatabaseAdaptor.php");
+
+          $model = new DatabaseConnection();
+
+          $issuesArray = $model->getAllIssuesALL();
+          $currentNum = 1;
+          for($i = 0; $i < count($issuesArray); $i++) { ?>
+              <a class="issueLink"id="issueLink<?= $currentNum; ?>" style="float: left; width: 280px;height: 280px;" href="http://localhost/HackArizona/issue_view.php?i= <?= $issuesArray[$i]["issue_id"]; ?>">
+              <div class="issue">
+                <h3 id="issueTitle<?= $currentNum; ?>" style="font-size: 15pt;"><?= $issuesArray[$i]["issue_name"]; ?></h3>
+                <img id="imgThumb<?= $currentNum; ?>" src="<?= $issuesArray[$i]["picture"]; ?>" class="img-circle" alt="imgThumb<?= $currentNum; ?>" width="200" height="200">
+              </div></a>
+
+          <?php
+            $currentNum++;
+            }
+           ?>
           <!--Javascript should fill this in from pullPopular.js-->
         </div>
         <a id="seeAllIssues" style="display: inline-block;" href="#" type="button" class="btn btn-info btn-block">See All Issues</a>
