@@ -39,6 +39,7 @@ body {
 #popularIssues {
   margin-top: 25px;
   margin-bottom: 25px;
+  padding-right: 60px;
   text-align: center;
   color: black;
   overflow: auto;
@@ -46,7 +47,7 @@ body {
   min-height: 280px;
   margin-left: auto;
   margin-right: auto;
-  display:inline-block;
+  overflow-x: hidden;
 }
 
 
