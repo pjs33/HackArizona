@@ -140,7 +140,7 @@
 
   <body>
     <?php
-      require_once("view_components/navbar.php");
+      require_once("view_components/navbar_new.php");
     ?>
 
     <div id="bodyContent">

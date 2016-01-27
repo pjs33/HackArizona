@@ -43,8 +43,8 @@
 }
 
 #titleFlavor {
-  font-size: 13pt;
-  font-family: 'Parisienne', cursive;
+  font-size: 12pt;
+  font-family: 'Ubuntu Condensed', sans-serif;
   font-weight: 400;
   position: absolute;
   left: 70px;
@@ -92,9 +92,10 @@
 }
 
 </style>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
 <div id="styleBar"></div>
-  <div id="navBar" data-spy="affix" data-offset-top="100">
+  <div id="navBar" data-spy="affix" data-offset-top="20">
     <!--site logo
     <img id="logo" data-spy="affix" src="./img/logov3.jpg">-->
     <a id="homeLink" href ="http://localhost/HackArizona/index_new.php">
